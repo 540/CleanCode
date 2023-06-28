@@ -3,7 +3,7 @@
     "description": "Php testing boilerplate",
     "type": "project",
     "require": {
-        "php": "^8"
+        "php": "^8.2"
     },
     "require-dev": {
         "phpunit/phpunit": "^9.3.10"
