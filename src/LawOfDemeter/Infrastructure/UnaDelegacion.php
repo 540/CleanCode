@@ -38,7 +38,8 @@ class UnaDelegacion implements Delegacion
         {
             foreach ($sucursal->ObtenerEmpleados() as $empleado)
             {
-                $suma = $empleado->ObtenerPrecioHora() * $empleado->ObtenerPrecioHora();
+                $precioDelEmpleado = $empleado->ObtenerPrecioHora() * $empleado->ObtenerHorasTrabajadas();
+                $suma = $suma + $precioDelEmpleado;
             }
         }
         return $suma;
@@ -52,10 +53,11 @@ class UnaDelegacion implements Delegacion
         {
             foreach ($sucursal->ObtenerEmpleados() as $empleado)
             {
-                $pagaSemanal = $empleado->ObtenerPrecioHora() * $empleado->ObtenerPrecioHora();
+                $pagaSemanal = $empleado->ObtenerPrecioHora() * $empleado->ObtenerHorasTrabajadas();
                 if ($pagaMaxima < $pagaSemanal)
                 {
                     $empleadoConMasPaga = $empleado;
+                    $pagaMaxima = $pagaSemanal;
                 }
             }
         }

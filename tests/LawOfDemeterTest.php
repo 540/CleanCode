@@ -45,6 +45,9 @@ final class LawOfDemeterTest extends TestCase
         $this->assertEquals($precioEsperado, $this->delegacion->ObtenerGastosSemanales());
     }
 
+    /**
+     * @test
+     */
     public function ObtenerElNombreDelEmpleadoQueMasHaCobradoEnLaSemana(): void
     {
         $nombreDelEmpleado = "Asier";
