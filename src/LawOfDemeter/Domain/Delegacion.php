@@ -1,6 +1,6 @@
 <?php
 
-namespace LawOfDemeter\Domain;
+namespace Deg540\PHPTestingBoilerplate\LawOfDemeter\Domain;
 
 interface Delegacion
 {

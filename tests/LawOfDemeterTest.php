@@ -2,10 +2,10 @@
 
 namespace Deg540\PHPTestingBoilerplate\Test;
 
-use Infrastructure\UnaDelegacion;
-use Infrastructure\UnaSucursal;
-use Infrastructure\UnEmpleado;
-use LawOfDemeter\Domain\Delegacion;
+use Deg540\PHPTestingBoilerplate\LawOfDemeter\Domain\Delegacion;
+use Deg540\PHPTestingBoilerplate\LawOfDemeter\Infrastructure\UnaDelegacion;
+use Deg540\PHPTestingBoilerplate\LawOfDemeter\Infrastructure\UnaSucursal;
+use Deg540\PHPTestingBoilerplate\LawOfDemeter\Infrastructure\UnEmpleado;
 use PHPUnit\Framework\TestCase;
 
 final class LawOfDemeterTest extends TestCase
@@ -49,7 +49,6 @@ final class LawOfDemeterTest extends TestCase
     {
         $nombreDelEmpleado = "Asier";
         $this->assertEquals($nombreDelEmpleado, $this->delegacion->ObtenerNombreDelEmpleadoConMasSueldo());
-
     }
 
 }

@@ -1,9 +1,9 @@
 <?php
 
-namespace Infrastructure;
+namespace Deg540\PHPTestingBoilerplate\LawOfDemeter\Infrastructure;
 
-use LawOfDemeter\Domain\Delegacion;
-use LawOfDemeter\Domain\Sucursal;
+use Deg540\PHPTestingBoilerplate\LawOfDemeter\Domain\Delegacion;
+use Deg540\PHPTestingBoilerplate\LawOfDemeter\Domain\Sucursal;
 
 class UnaDelegacion implements Delegacion
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Infrastructure;
+namespace Deg540\PHPTestingBoilerplate\LawOfDemeter\Infrastructure;
 
-use LawOfDemeter\Domain\Empleado;
+use Deg540\PHPTestingBoilerplate\LawOfDemeter\Domain\Empleado;
 
 class UnEmpleado implements Empleado
 {
