@@ -36,10 +36,7 @@ class UnaDelegacion implements Delegacion
         $suma = 0.0;
         foreach ($this->sucursales as $sucursal)
         {
-            foreach ($sucursal->ObtenerEmpleados() as $empleado)
-            {
-                $suma = $suma + $empleado->CalcularGastoDelEmpleado();
-            }
+            $suma = $suma + $sucursal->CalcularGastoSemanal();
         }
         return $suma;
     }

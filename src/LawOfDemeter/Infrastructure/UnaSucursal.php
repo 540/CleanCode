@@ -42,4 +42,14 @@ class UnaSucursal implements Sucursal
     {
         return $this->nombre;
     }
+
+    public function CalcularGastoSemanal(): float
+    {
+        $suma = 0.0;
+        foreach ($this->empleados as $empleado)
+        {
+            $suma = $suma + $empleado->CalcularGastoDelEmpleado();
+        }
+        return $suma;
+    }
 }
