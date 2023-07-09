@@ -37,4 +37,9 @@ class UnEmpleado implements Empleado
     {
         return $this->precioPorHora;
     }
+
+    public function CalcularGastoDelEmpleado(): float
+    {
+        return $this->horasTrabajadas * $this->precioPorHora;
+    }
 }
