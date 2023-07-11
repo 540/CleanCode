@@ -64,7 +64,7 @@ class UnaSucursal implements Sucursal
                 continue;
             }
 
-            if ($empleadoConMasPaga->CalcularGastoDelEmpleado() < $empleado->CalcularGastoDelEmpleado())
+            if (!$empleadoConMasPaga->CobraMasQueEsteEmpleado($empleado))
             {
                 $empleadoConMasPaga = $empleado;
             }

@@ -42,4 +42,9 @@ class UnEmpleado implements Empleado
     {
         return $this->horasTrabajadas * $this->precioPorHora;
     }
+
+    public function CobraMasQueEsteEmpleado(Empleado $empleado): bool
+    {
+        return $this->CalcularGastoDelEmpleado() > $empleado->CalcularGastoDelEmpleado();
+    }
 }
