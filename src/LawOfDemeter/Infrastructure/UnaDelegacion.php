@@ -47,14 +47,12 @@ class UnaDelegacion implements Delegacion
         $pagaMaxima = 0.0;
         foreach ($this->sucursales as $sucursal)
         {
-            foreach ($sucursal->ObtenerEmpleados() as $empleado)
+            $empleado = $sucursal->ObtenerEmpleadoMasCaro();
+            $pagaEmpleado = $empleado->CalcularGastoDelEmpleado();
+            if ($pagaMaxima < $pagaEmpleado)
             {
-                $pagaSemanal = $empleado->CalcularGastoDelEmpleado();
-                if ($pagaMaxima < $pagaSemanal)
-                {
-                    $empleadoConMasPaga = $empleado;
-                    $pagaMaxima = $pagaSemanal;
-                }
+                $empleadoConMasPaga = $empleado;
+                $pagaMaxima = $pagaEmpleado;
             }
         }
         return $empleadoConMasPaga->ObtenerNombre();

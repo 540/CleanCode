@@ -52,4 +52,23 @@ class UnaSucursal implements Sucursal
         }
         return $suma;
     }
+
+    public function ObtenerEmpleadoMasCaro(): Empleado
+    {
+        $empleadoConMasPaga = null;
+        foreach ($this->empleados as $empleado)
+        {
+            if ($empleadoConMasPaga == null)
+            {
+                $empleadoConMasPaga = $empleado;
+                continue;
+            }
+
+            if ($empleadoConMasPaga->CalcularGastoDelEmpleado() < $empleado->CalcularGastoDelEmpleado())
+            {
+                $empleadoConMasPaga = $empleado;
+            }
+        }
+        return $empleadoConMasPaga;
+    }
 }

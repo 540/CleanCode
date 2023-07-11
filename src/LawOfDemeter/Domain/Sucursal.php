@@ -11,4 +11,5 @@ interface Sucursal
     public function InsertarEmpleado(Empleado $empleado);
     public function ObtenerNombre():string;
     public function CalcularGastoSemanal():float;
+    public function ObtenerEmpleadoMasCaro(): Empleado;
 }
