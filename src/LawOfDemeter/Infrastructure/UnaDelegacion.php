@@ -43,21 +43,20 @@ class UnaDelegacion implements Delegacion
 
     public function ObtenerNombreDelEmpleadoConMasSueldo(): string
     {
-        $empleadoConMasPaga = null;
+        $sucursalConEmpleadoMasCaro = null;
         foreach ($this->sucursales as $sucursal)
         {
-            $empleado = $sucursal->ObtenerEmpleadoMasCaro();
-            if ($empleadoConMasPaga == null)
+            if ($sucursalConEmpleadoMasCaro == null)
             {
-                $empleadoConMasPaga = $empleado;
-                continue;
+                $sucursalConEmpleadoMasCaro = $sucursal;
             }
 
-            if (!$empleadoConMasPaga->CobraMasQueEsteEmpleado($empleado))
+            if (!$sucursalConEmpleadoMasCaro->CobraMasQueEsteEmpleado($sucursal->ObtenerEmpleadoMasCaro()))
             {
-                $empleadoConMasPaga = $empleado;
+                $sucursalConEmpleadoMasCaro = $sucursal;
             }
         }
-        return $empleadoConMasPaga->ObtenerNombre();
+
+        return $sucursalConEmpleadoMasCaro->ObtenerNombreDelEmpleadoMasCaro();
     }
 }

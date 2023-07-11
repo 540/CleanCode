@@ -12,4 +12,6 @@ interface Sucursal
     public function ObtenerNombre():string;
     public function CalcularGastoSemanal():float;
     public function ObtenerEmpleadoMasCaro(): Empleado;
+    public function CobraMasQueEsteEmpleado(Empleado $empleado): bool;
+    public function ObtenerNombreDelEmpleadoMasCaro(): string;
 }

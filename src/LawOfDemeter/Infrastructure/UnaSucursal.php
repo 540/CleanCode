@@ -71,4 +71,16 @@ class UnaSucursal implements Sucursal
         }
         return $empleadoConMasPaga;
     }
+
+    public function CobraMasQueEsteEmpleado(Empleado $empleado): bool
+    {
+        return $this->ObtenerEmpleadoMasCaro()
+            ->CobraMasQueEsteEmpleado($empleado);
+    }
+
+    public function ObtenerNombreDelEmpleadoMasCaro(): string
+    {
+        return $this->ObtenerEmpleadoMasCaro()
+            ->ObtenerNombre();
+    }
 }
