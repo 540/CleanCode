@@ -1,6 +1,11 @@
+# DRY Principle (Don't Repeat Yourself)
+
 El principio DRY (Don't Repeat Yourself) en programación es una filosofía
 que busca evitar la duplicación de código. Su objetivo es reducir la redundancia
 y mejorar la mantenibilidad del código.
+
+### Articulo
+https://medium.com/@Ialimijoro/the-dry-principle-and-why-you-should-use-it-f02435ae9449
 
 ## Error Case
 
