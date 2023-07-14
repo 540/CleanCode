@@ -8,6 +8,7 @@ class Programmer
     protected $email;
     protected $phoneNumber;
     protected $password;
+    protected array $tasksToBeProgrammed = [];
 
     /**
      * @param $name
@@ -15,12 +16,13 @@ class Programmer
      * @param $phoneNumber
      * @param $password
      */
-    public function __construct($name, $email, $phoneNumber, $password)
+    public function __construct($name, $email, $phoneNumber, $password, array $tasks)
     {
         $this->name = $name;
         $this->email = $email;
         $this->phoneNumber = $phoneNumber;
         $this->password = $password;
+        $this->tasksToBeProgrammed = $tasks;
     }
 
     public function getName(): string

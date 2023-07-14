@@ -8,6 +8,7 @@ class Administrator
     protected $email;
     protected $phoneNumber;
     protected $password;
+    protected array $tasksToManage = [];
 
     /**
      * @param $name
@@ -15,12 +16,13 @@ class Administrator
      * @param $phoneNumber
      * @param $password
      */
-    public function __construct($name, $email, $phoneNumber, $password)
+    public function __construct($name, $email, $phoneNumber, $password, array $tasks)
     {
         $this->name = $name;
         $this->email = $email;
         $this->phoneNumber = $phoneNumber;
         $this->password = $password;
+        $this->tasksToManage = $tasks;
     }
 
     public function getName(): string
