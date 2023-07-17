@@ -1,0 +1,12 @@
+grumphp:
+    tasks:
+        phpunit:
+        phplint: ~
+        phpcs:
+            standard: PSR12
+        phpmd:
+            report_format: text
+            triggered_by: [ 'php' ]
+        phpstan:
+            triggered_by: [ 'php' ]
+            use_grumphp_paths: true
