@@ -6,7 +6,6 @@ grumphp:
             standard: PSR12
         phpmd:
             report_format: text
-            ruleset: [ 'ruleset.xml' ]
             triggered_by: [ 'php' ]
         phpstan:
             triggered_by: [ 'php' ]
