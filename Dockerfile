@@ -7,14 +7,14 @@ RUN sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/ins
 RUN echo "source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ~/.zshrc && \
 echo "source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh" >> ~/.zshrc && \
 echo "cd /home/php/cleanCode" >> ~/.zshrc && \
-echo " _____ _  _    ___  " && \
-echo "| ____| || |  / _ \ " && \
-echo "| |__ | || |_| | | |" && \
-echo "|___ \|__   _| | | |" && \
-echo " ___) |  | | | |_| |" && \
-echo "|____/   |_|  \___/ " && \
-echo "Visit us on https://www.540deg.com/" && \
-echo "Git repository: https://github.com/540/CleanCode"
+echo "echo \" _____ _  _    ___  \"" >> ~/.zshrc && \
+echo "echo \"| ____| || |  / _ \ \"" >> ~/.zshrc && \
+echo "echo \"| |__ | || |_| | | |\"" >> ~/.zshrc && \
+echo "echo \"|___ \|__   _| | | |\"" >> ~/.zshrc && \
+echo "echo \" ___) |  | | | |_| |\"" >> ~/.zshrc && \
+echo "echo \"|____/   |_|  \___/ \"" >> ~/.zshrc && \
+echo "echo \"Visit us on https://www.540deg.com/\"" >> ~/.zshrc && \
+echo "echo \"Git repository: https://github.com/540/CleanCode\"" >> ~/.zshrc
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
