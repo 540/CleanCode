@@ -2,13 +2,13 @@
 
 namespace Deg540\PHPTestingBoilerplate\DRY\Error;
 
-class Programmer
+class Developer
 {
     protected $name;
     protected $email;
     protected $phoneNumber;
     protected $password;
-    protected array $tasksToBeProgrammed = [];
+    protected array $tasksToDevelop = [];
 
     /**
      * @param $name
@@ -22,7 +22,7 @@ class Programmer
         $this->email = $email;
         $this->phoneNumber = $phoneNumber;
         $this->password = $password;
-        $this->tasksToBeProgrammed = $tasks;
+        $this->tasksToDevelop = $tasks;
     }
 
     public function getName(): string
@@ -53,11 +53,11 @@ class Programmer
             ' Password: ' . $this->getPassword();
     }
 
-    public function tasksToBeProgrammed(): string
+    public function tasksToDevelop(): string
     {
-        if (rand(0, 1) == 0) {
-            return 'You have no tasks to be programmed';
+        if (empty($this->tasksToDevelop)) {
+            return 'You have no tasks to develop';
         }
-        return 'You have tasks to be programmed';
+        return 'You have tasks to develop';
     }
 }

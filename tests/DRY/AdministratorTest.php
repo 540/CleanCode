@@ -5,7 +5,7 @@ namespace Deg540\PHPTestingBoilerplate\Test\DRY;
 use Deg540\PHPTestingBoilerplate\DRY\Success\Administrator;
 use PHPUnit\Framework\TestCase;
 
-class AdministratorTests extends TestCase
+class AdministratorTest extends TestCase
 {
     public Administrator $administrator;
     protected function setUp(): void

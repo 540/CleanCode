@@ -2,25 +2,25 @@
 
 namespace Deg540\PHPTestingBoilerplate\Test\DRY;
 
-use Deg540\PHPTestingBoilerplate\DRY\Success\Programmer;
+use Deg540\PHPTestingBoilerplate\DRY\Success\Developer;
 use PHPUnit\Framework\TestCase;
 
-class ProgrammerTests extends TestCase
+class DeveloperTest extends TestCase
 {
-    public Programmer $etxebe;
-    public Programmer $asier;
+    public Developer $etxebe;
+    public Developer $asier;
     protected function setUp(): void
     {
         parent::setUp();
         
-        $this->etxebe = new Programmer(
+        $this->etxebe = new Developer(
             'Etxebe',
             'etxebe@saltoki.com',
         '987654321',
             'soyEtxebe',
             []
         );
-        $this->asier = new Programmer(
+        $this->asier = new Developer(
             'Asier',
             'asier.alba@540deg.com',
         '192837465',
@@ -32,7 +32,7 @@ class ProgrammerTests extends TestCase
     /**
      * @test
      */
-    public function getAllDataFromAdmin()
+    public function getAllDataFromDevelopers()
     {
         $dataEtxebe = $this->etxebe->getAllData();
         $dataAsier = $this->asier->getAllData();
@@ -44,12 +44,12 @@ class ProgrammerTests extends TestCase
     /**
      * @test
      */
-    public function noTasksToManage()
+    public function noTasksToDevelop()
     {
         $tasksEtxebe = $this->etxebe->tasksToBeProgrammed();
         $tasksAsier = $this->asier->tasksToBeProgrammed();
         
-        $this->assertEquals('You have no tasks to be programmed', $tasksEtxebe);
-        $this->assertEquals('You have tasks to be programmed', $tasksAsier);
+        $this->assertEquals('You have no tasks to develop', $tasksEtxebe);
+        $this->assertEquals('You have tasks to develop', $tasksAsier);
     }
 }

@@ -55,7 +55,7 @@ class Administrator
 
     public function tasksToManage(): string
     {
-        if (rand(0, 1) == 0) {
+        if (empty($this->tasksToManage)) {
             return 'You have no tasks to manage';
         }
         return 'You have tasks to manage';
