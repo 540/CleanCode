@@ -1,6 +1,6 @@
 <?php
 
-namespace Deg540\PHPTestingBoilerplate\LawOfDemeter\Error\Domain;
+namespace Deg540\PHPTestingBoilerplate\LawOfDemeter\Shared\Domain;
 
 interface BranchOffice
 {

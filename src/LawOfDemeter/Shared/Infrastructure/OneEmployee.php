@@ -1,8 +1,8 @@
 <?php
 
-namespace Deg540\PHPTestingBoilerplate\LawOfDemeter\Success\Infrastructure;
+namespace Deg540\PHPTestingBoilerplate\LawOfDemeter\Shared\Infrastructure;
 
-use Deg540\PHPTestingBoilerplate\LawOfDemeter\Success\Domain\Employee;
+use Deg540\PHPTestingBoilerplate\LawOfDemeter\Shared\Domain\Employee;
 
 class OneEmployee implements Employee
 {

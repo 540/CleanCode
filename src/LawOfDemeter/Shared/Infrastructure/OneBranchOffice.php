@@ -1,9 +1,9 @@
 <?php
 
-namespace Deg540\PHPTestingBoilerplate\LawOfDemeter\Success\Infrastructure;
+namespace Deg540\PHPTestingBoilerplate\LawOfDemeter\Shared\Infrastructure;
 
-use Deg540\PHPTestingBoilerplate\LawOfDemeter\Success\Domain\BranchOffice;
-use Deg540\PHPTestingBoilerplate\LawOfDemeter\Success\Domain\Employee;
+use Deg540\PHPTestingBoilerplate\LawOfDemeter\Shared\Domain\BranchOffice;
+use Deg540\PHPTestingBoilerplate\LawOfDemeter\Shared\Domain\Employee;
 
 class OneBranchOffice implements BranchOffice
 {

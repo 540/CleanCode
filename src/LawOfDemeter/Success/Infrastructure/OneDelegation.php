@@ -2,12 +2,11 @@
 
 namespace Deg540\PHPTestingBoilerplate\LawOfDemeter\Success\Infrastructure;
 
-use Deg540\PHPTestingBoilerplate\LawOfDemeter\Success\Domain\BranchOffice;
-use Deg540\PHPTestingBoilerplate\LawOfDemeter\Success\Domain\Delegation;
+use Deg540\PHPTestingBoilerplate\LawOfDemeter\Shared\Domain\BranchOffice;
+use Deg540\PHPTestingBoilerplate\LawOfDemeter\Shared\Domain\Delegation;
 
 class OneDelegation implements Delegation
 {
-
     /**
      * @var BranchOffice[]
      */

@@ -2,8 +2,8 @@
 
 namespace Deg540\PHPTestingBoilerplate\LawOfDemeter\Error\Infrastructure;
 
-use Deg540\PHPTestingBoilerplate\LawOfDemeter\Error\Domain\BranchOffice;
-use Deg540\PHPTestingBoilerplate\LawOfDemeter\Error\Domain\Delegation;
+use Deg540\PHPTestingBoilerplate\LawOfDemeter\Shared\Domain\BranchOffice;
+use Deg540\PHPTestingBoilerplate\LawOfDemeter\Shared\Domain\Delegation;
 
 class OneDelegation implements Delegation
 {

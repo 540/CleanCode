@@ -2,10 +2,10 @@
 
 namespace Deg540\PHPTestingBoilerplate\Test\LawOfDemeter\Success;
 
-use Deg540\PHPTestingBoilerplate\LawOfDemeter\Error\Domain\Delegation;
-use Deg540\PHPTestingBoilerplate\LawOfDemeter\Error\Infrastructure\OneBranchOffice;
 use Deg540\PHPTestingBoilerplate\LawOfDemeter\Error\Infrastructure\OneDelegation;
-use Deg540\PHPTestingBoilerplate\LawOfDemeter\Error\Infrastructure\OneEmployee;
+use Deg540\PHPTestingBoilerplate\LawOfDemeter\Shared\Domain\Delegation;
+use Deg540\PHPTestingBoilerplate\LawOfDemeter\Shared\Infrastructure\OneBranchOffice;
+use Deg540\PHPTestingBoilerplate\LawOfDemeter\Shared\Infrastructure\OneEmployee;
 use PHPUnit\Framework\TestCase;
 
 final class LawOfDemeterTest extends TestCase
