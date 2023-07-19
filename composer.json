@@ -6,7 +6,8 @@
         "php": "^8.2"
     },
     "require-dev": {
-        "phpunit/phpunit": "^9.3.10"
+        "phpunit/phpunit": "^9.3.10",
+        "phpro/grumphp": "^2.0"
     },
     "minimum-stability": "stable",
     "prefer-stable": true,
@@ -21,7 +22,10 @@
         }
     },
     "config": {
-        "optimize-autoloader": true
+        "optimize-autoloader": true,
+        "allow-plugins": {
+            "phpro/grumphp": true
+        }
     },
     "scripts": {
         "test": [
