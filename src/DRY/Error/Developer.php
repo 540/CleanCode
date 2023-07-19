@@ -4,10 +4,10 @@ namespace Deg540\PHPTestingBoilerplate\DRY\Error;
 
 class Developer
 {
-    protected $name;
-    protected $email;
-    protected $phoneNumber;
-    protected $password;
+    protected string $name;
+    protected string $email;
+    protected string $phoneNumber;
+    protected string $password;
     protected array $tasksToDevelop = [];
 
     /**
@@ -15,6 +15,7 @@ class Developer
      * @param $email
      * @param $phoneNumber
      * @param $password
+     * @param array $tasks
      */
     public function __construct($name, $email, $phoneNumber, $password, array $tasks)
     {

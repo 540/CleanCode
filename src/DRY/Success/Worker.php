@@ -4,10 +4,10 @@ namespace Deg540\PHPTestingBoilerplate\DRY\Success;
 
 abstract class Worker
 {
-    protected $name;
-    protected $email;
-    protected $phoneNumber;
-    protected $password;
+    protected string $name;
+    protected string $email;
+    protected string $phoneNumber;
+    protected string $password;
 
     /**
      * @param $name
