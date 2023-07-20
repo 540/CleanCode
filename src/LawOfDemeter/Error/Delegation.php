@@ -1,11 +1,10 @@
 <?php
 
-namespace Deg540\PHPTestingBoilerplate\LawOfDemeter\Error\Infrastructure;
+namespace Deg540\PHPTestingBoilerplate\LawOfDemeter\Error;
 
-use Deg540\PHPTestingBoilerplate\LawOfDemeter\Shared\Domain\BranchOffice;
-use Deg540\PHPTestingBoilerplate\LawOfDemeter\Shared\Domain\Delegation;
+use Deg540\PHPTestingBoilerplate\LawOfDemeter\Shared\BranchOffice;
 
-class OneDelegation implements Delegation
+class Delegation
 {
     /**
      * @var BranchOffice[]
@@ -33,38 +32,35 @@ class OneDelegation implements Delegation
     public function getWeeklyWaste(): float
     {
         $amount = 0.0;
-        for ($i = 0; $i < count($this->branchOffices); $i++)
-        {
+        for ($i = 0; $i < count($this->branchOffices); $i++) {
             //Here we are broking the Law of Demeter
             //You are accessing across multiple levels of objects
             foreach ($this->getBranchOffices()[$i]->getEmployees() as $employee) {
                 $amount = $amount + $employee->calculateEmployeeExpense();
             }
         }
-        
+
         return $amount;
     }
 
     public function getEmployeeNameWithMostSalary(): string
     {
-        $branchOfficeWithMoreExpensiveEmployee = null;
-        foreach ($this->branchOffices as $branchOffice)
-        {
-            if ($branchOfficeWithMoreExpensiveEmployee == null)
-            {
-                $branchOfficeWithMoreExpensiveEmployee = $branchOffice;
+        $branchMoreExpensive = null;
+        for ($i = 0; $i < count($this->branchOffices); $i++) {
+            if ($branchMoreExpensive == null) {
+                $branchMoreExpensive = $this->branchOffices[$i];
             }
 
             //Here we are broking the Law of Demeter
             //You are accessing across multiple levels of objects
             if (
-                $branchOffice->getEmployeeMoreExpensive()->calculateEmployeeExpense() >
-                $branchOfficeWithMoreExpensiveEmployee->getEmployeeMoreExpensive()->calculateEmployeeExpense()
+                $this->getBranchOffices()[$i]->getEmployeeMoreExpensive()->calculateEmployeeExpense() >
+                $branchMoreExpensive->getEmployeeMoreExpensive()->calculateEmployeeExpense()
             ) {
-                $branchOfficeWithMoreExpensiveEmployee = $branchOffice;
+                $branchMoreExpensive = $this->branchOffices[$i];
             }
         }
-        
-        return $branchOfficeWithMoreExpensiveEmployee->getNameOfMoreExpensiveEmployee();
+
+        return $branchMoreExpensive->getNameOfmoreExpensiveWorker();
     }
 }

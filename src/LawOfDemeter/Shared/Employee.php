@@ -1,12 +1,9 @@
 <?php
 
-namespace Deg540\PHPTestingBoilerplate\LawOfDemeter\Shared\Infrastructure;
+namespace Deg540\PHPTestingBoilerplate\LawOfDemeter\Shared;
 
-use Deg540\PHPTestingBoilerplate\LawOfDemeter\Shared\Domain\Employee;
-
-class OneEmployee implements Employee
+class Employee
 {
-
     private string $name;
     private int $workedHours;
     private float $pricePerHour;

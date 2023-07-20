@@ -2,15 +2,13 @@
 
 namespace Deg540\PHPTestingBoilerplate\Test\LawOfDemeter\Error;
 
-use Deg540\PHPTestingBoilerplate\LawOfDemeter\Error\Infrastructure\OneDelegation;
-use Deg540\PHPTestingBoilerplate\LawOfDemeter\Shared\Domain\Delegation;
-use Deg540\PHPTestingBoilerplate\LawOfDemeter\Shared\Infrastructure\OneBranchOffice;
-use Deg540\PHPTestingBoilerplate\LawOfDemeter\Shared\Infrastructure\OneEmployee;
+use Deg540\PHPTestingBoilerplate\LawOfDemeter\Error\Delegation;
+use Deg540\PHPTestingBoilerplate\LawOfDemeter\Shared\BranchOffice;
+use Deg540\PHPTestingBoilerplate\LawOfDemeter\Shared\Employee;
 use PHPUnit\Framework\TestCase;
 
 final class LawOfDemeterErrorTest extends TestCase
 {
-
     private Delegation $delegation;
 
     /**
@@ -20,18 +18,18 @@ final class LawOfDemeterErrorTest extends TestCase
     {
         parent::setUp();
 
-        $employee1 = new OneEmployee("Asier", 40, 30.5);
-        $employee2 = new OneEmployee("Javier", 20, 40.9);
-        $employee3 = new OneEmployee("Iker", 10, 100.0);
+        $employee1 = new Employee("Asier", 40, 30.5);
+        $employee2 = new Employee("Javier", 20, 40.9);
+        $employee3 = new Employee("Iker", 10, 100.0);
 
-        $branchOffice1 = new OneBranchOffice("Pamplona");
+        $branchOffice1 = new BranchOffice("Pamplona");
         $branchOffice1->insertEmployee($employee1);
         $branchOffice1->insertEmployee($employee2);
 
-        $branchOffice2 = new OneBranchOffice("Olite");
+        $branchOffice2 = new BranchOffice("Olite");
         $branchOffice2->insertEmployee($employee3);
 
-        $this->delegation = new OneDelegation();
+        $this->delegation = new Delegation();
         $this->delegation->insertBranchOffice($branchOffice1);
         $this->delegation->insertBranchOffice($branchOffice2);
     }
@@ -39,7 +37,7 @@ final class LawOfDemeterErrorTest extends TestCase
     /**
      * @test
      */
-    public function GetDelegationWeekExpense(): void
+    public function getDelegationWeekExpense(): void
     {
         $expectedPrice = 3038.0;
         $this->assertEquals($expectedPrice, $this->delegation->getWeeklyWaste());
@@ -48,10 +46,9 @@ final class LawOfDemeterErrorTest extends TestCase
     /**
      * @test
      */
-    public function GetTheNameOfTheMostPaidEmployeeInTheWeek(): void
+    public function getTheNameOfTheMostPaidEmployeeInTheWeek(): void
     {
         $employeeName = "Asier";
         $this->assertEquals($employeeName, $this->delegation->getEmployeeNameWithMostSalary());
     }
-
 }

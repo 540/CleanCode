@@ -1,11 +1,10 @@
 <?php
 
-namespace Deg540\PHPTestingBoilerplate\LawOfDemeter\Trial\Infrastructure;
+namespace Deg540\PHPTestingBoilerplate\LawOfDemeter\Trial;
 
-use Deg540\PHPTestingBoilerplate\LawOfDemeter\Shared\Domain\BranchOffice;
-use Deg540\PHPTestingBoilerplate\LawOfDemeter\Shared\Domain\Delegation;
+use Deg540\PHPTestingBoilerplate\LawOfDemeter\Shared\BranchOffice;
 
-class OneDelegation implements Delegation
+class Delegation
 {
     /**
      * @var BranchOffice[]
@@ -34,8 +33,7 @@ class OneDelegation implements Delegation
     {
         //Fix the code necessary to pass the tests and comply with Demeter's Law.
         $amount = 0.0;
-        for ($i = 0; $i < count($this->branchOffices); $i++)
-        {
+        for ($i = 0; $i < count($this->branchOffices); $i++) {
             foreach ($this->getBranchOffices()[$i]->getEmployees() as $employee) {
                 $amount = $amount + $employee->calculateEmployeeExpense();
             }
@@ -47,22 +45,20 @@ class OneDelegation implements Delegation
     public function getEmployeeNameWithMostSalary(): string
     {
         //Fix the code necessary to pass the tests and comply with Demeter's Law.
-        $branchOfficeWithMoreExpensiveEmployee = null;
-        foreach ($this->branchOffices as $branchOffice)
-        {
-            if ($branchOfficeWithMoreExpensiveEmployee == null)
-            {
-                $branchOfficeWithMoreExpensiveEmployee = $branchOffice;
+        $branchMoreExpensive = null;
+        foreach ($this->branchOffices as $branchOffice) {
+            if ($branchMoreExpensive == null) {
+                $branchMoreExpensive = $branchOffice;
             }
-            
+
             if (
                 $branchOffice->getEmployeeMoreExpensive()->calculateEmployeeExpense() >
-                $branchOfficeWithMoreExpensiveEmployee->getEmployeeMoreExpensive()->calculateEmployeeExpense()
+                $branchMoreExpensive->getEmployeeMoreExpensive()->calculateEmployeeExpense()
             ) {
-                $branchOfficeWithMoreExpensiveEmployee = $branchOffice;
+                $branchMoreExpensive = $branchOffice;
             }
         }
 
-        return $branchOfficeWithMoreExpensiveEmployee->getNameOfMoreExpensiveEmployee();
+        return $branchMoreExpensive->getNameOfmoreExpensiveWorker();
     }
 }
