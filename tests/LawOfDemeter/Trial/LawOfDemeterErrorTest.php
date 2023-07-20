@@ -1,8 +1,8 @@
 <?php
 
-namespace Deg540\PHPTestingBoilerplate\Test\LawOfDemeter\Error;
+namespace Deg540\PHPTestingBoilerplate\Test\LawOfDemeter\Trial;
 
-use Deg540\PHPTestingBoilerplate\LawOfDemeter\Error\Infrastructure\OneDelegation;
+use Deg540\PHPTestingBoilerplate\LawOfDemeter\Trial\Infrastructure\OneDelegation;
 use Deg540\PHPTestingBoilerplate\LawOfDemeter\Shared\Domain\Delegation;
 use Deg540\PHPTestingBoilerplate\LawOfDemeter\Shared\Infrastructure\OneBranchOffice;
 use Deg540\PHPTestingBoilerplate\LawOfDemeter\Shared\Infrastructure\OneEmployee;
@@ -11,7 +11,7 @@ use PHPUnit\Framework\TestCase;
 final class LawOfDemeterErrorTest extends TestCase
 {
 
-    private Delegation $delegation;
+    private Delegation $delegacion;
 
     /**
      * @setUp
@@ -31,9 +31,9 @@ final class LawOfDemeterErrorTest extends TestCase
         $branchOffice2 = new OneBranchOffice("Olite");
         $branchOffice2->insertEmployee($employee3);
 
-        $this->delegation = new OneDelegation();
-        $this->delegation->insertBranchOffice($branchOffice1);
-        $this->delegation->insertBranchOffice($branchOffice2);
+        $this->delegacion = new OneDelegation();
+        $this->delegacion->insertBranchOffice($branchOffice1);
+        $this->delegacion->insertBranchOffice($branchOffice2);
     }
 
     /**
@@ -41,8 +41,8 @@ final class LawOfDemeterErrorTest extends TestCase
      */
     public function GetDelegationWeekExpense(): void
     {
-        $expectedPrice = 3038.0;
-        $this->assertEquals($expectedPrice, $this->delegation->getWeeklyWaste());
+        $expectedPrice = 0.0;
+        $this->assertEquals($expectedPrice, $this->delegacion->getWeeklyWaste());
     }
 
     /**
@@ -50,8 +50,8 @@ final class LawOfDemeterErrorTest extends TestCase
      */
     public function GetTheNameOfTheMostPaidEmployeeInTheWeek(): void
     {
-        $employeeName = "Asier";
-        $this->assertEquals($employeeName, $this->delegation->getEmployeeNameWithMostSalary());
+        $employeeName = "";
+        $this->assertEquals($employeeName, $this->delegacion->getEmployeeNameWithMostSalary());
     }
 
 }

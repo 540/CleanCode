@@ -1,6 +1,6 @@
 <?php
 
-namespace Deg540\PHPTestingBoilerplate\LawOfDemeter\Error\Infrastructure;
+namespace Deg540\PHPTestingBoilerplate\LawOfDemeter\Trial\Infrastructure;
 
 use Deg540\PHPTestingBoilerplate\LawOfDemeter\Shared\Domain\BranchOffice;
 use Deg540\PHPTestingBoilerplate\LawOfDemeter\Shared\Domain\Delegation;
@@ -32,21 +32,21 @@ class OneDelegation implements Delegation
 
     public function getWeeklyWaste(): float
     {
+        //Fix the code necessary to pass the tests and comply with Demeter's Law.
         $amount = 0.0;
         for ($i = 0; $i < count($this->branchOffices); $i++)
         {
-            //Here we are broking the Law of Demeter
-            //You are accessing across multiple levels of objects
             foreach ($this->getBranchOffices()[$i]->getEmployees() as $employee) {
                 $amount = $amount + $employee->calculateEmployeeExpense();
             }
         }
-        
+
         return $amount;
     }
 
     public function getEmployeeNameWithMostSalary(): string
     {
+        //Fix the code necessary to pass the tests and comply with Demeter's Law.
         $branchOfficeWithMoreExpensiveEmployee = null;
         foreach ($this->branchOffices as $branchOffice)
         {
@@ -54,9 +54,7 @@ class OneDelegation implements Delegation
             {
                 $branchOfficeWithMoreExpensiveEmployee = $branchOffice;
             }
-
-            //Here we are broking the Law of Demeter
-            //You are accessing across multiple levels of objects
+            
             if (
                 $branchOffice->getEmployeeMoreExpensive()->calculateEmployeeExpense() >
                 $branchOfficeWithMoreExpensiveEmployee->getEmployeeMoreExpensive()->calculateEmployeeExpense()
@@ -64,7 +62,7 @@ class OneDelegation implements Delegation
                 $branchOfficeWithMoreExpensiveEmployee = $branchOffice;
             }
         }
-        
+
         return $branchOfficeWithMoreExpensiveEmployee->getNameOfMoreExpensiveEmployee();
     }
 }

@@ -11,7 +11,7 @@ use PHPUnit\Framework\TestCase;
 final class LawOfDemeterTest extends TestCase
 {
 
-    private Delegation $delegacion;
+    private Delegation $delegation;
 
     /**
      * @setUp
@@ -20,38 +20,38 @@ final class LawOfDemeterTest extends TestCase
     {
         parent::setUp();
 
-        $empleado1 = new OneEmployee("Asier", 40, 30.5);
-        $empleado2 = new OneEmployee("Javier", 20, 40.9);
-        $empleado3 = new OneEmployee("Iker", 10, 100.0);
+        $employee1 = new OneEmployee("Asier", 40, 30.5);
+        $employee2 = new OneEmployee("Javier", 20, 40.9);
+        $employee3 = new OneEmployee("Iker", 10, 100.0);
 
-        $sucursal1 = new OneBranchOffice("Pamplona");
-        $sucursal1->insertEmployee($empleado1);
-        $sucursal1->insertEmployee($empleado2);
+        $branchOffice1 = new OneBranchOffice("Pamplona");
+        $branchOffice1->insertEmployee($employee1);
+        $branchOffice1->insertEmployee($employee2);
 
-        $sucursal2 = new OneBranchOffice("Olite");
-        $sucursal2->insertEmployee($empleado3);
+        $branchOffice2 = new OneBranchOffice("Olite");
+        $branchOffice2->insertEmployee($employee3);
 
-        $this->delegacion = new OneDelegation();
-        $this->delegacion->insertBranchOffice($sucursal1);
-        $this->delegacion->insertBranchOffice($sucursal2);
+        $this->delegation = new OneDelegation();
+        $this->delegation->insertBranchOffice($branchOffice1);
+        $this->delegation->insertBranchOffice($branchOffice2);
     }
 
     /**
      * @test
      */
-    public function ObtenerGastoPorSemanaDeLaDelegacion(): void
+    public function GetDelegationWeekExpense(): void
     {
-        $precioEsperado = 3038.0;
-        $this->assertEquals($precioEsperado, $this->delegacion->getWeeklyWaste());
+        $expectedPrice = 3038.0;
+        $this->assertEquals($expectedPrice, $this->delegation->getWeeklyWaste());
     }
 
     /**
      * @test
      */
-    public function ObtenerElNombreDelEmpleadoQueMasHaCobradoEnLaSemana(): void
+    public function GetTheNameOfTheMostPaidEmployeeInTheWeek(): void
     {
-        $nombreDelEmpleado = "Asier";
-        $this->assertEquals($nombreDelEmpleado, $this->delegacion->getEmployeeNameWithMostSalary());
+        $employeeName = "Asier";
+        $this->assertEquals($employeeName, $this->delegation->getEmployeeNameWithMostSalary());
     }
 
 }
