@@ -16,15 +16,7 @@ class Delegation
         $this->branchOffices = array();
     }
 
-    /**
-     * @return BranchOffice[]
-     */
-    public function getBranchOffices(): array
-    {
-        return $this->branchOffices;
-    }
-
-    public function insertBranchOffice(BranchOffice $branchOffice)
+    public function insertBranchOffice(BranchOffice $branchOffice): void
     {
         $this->branchOffices[] = $branchOffice;
     }
@@ -32,15 +24,21 @@ class Delegation
     public function getWeeklyWaste(): float
     {
         $amount = 0.0;
+        //Here we are following the Law of Demeter
+        //We are accessing immediately to a class that is followed by this and we aren´t
+        //accessing it through several levels.
         foreach ($this->branchOffices as $branchOffice) {
             $amount = $amount + $branchOffice->calculateWeeklyExpense();
         }
         return $amount;
     }
 
-    public function getEmployeeNameWithMostSalary(): string
+    public function getEmployeeNameWithBestSalary(): string
     {
         $branchMoreExpensive = null;
+        //Here we are following the Law of Demeter
+        //We are accessing immediately to a class that is followed by this and we aren´t
+        //accessing it through several levels.
         foreach ($this->branchOffices as $branchOffice) {
             if ($branchMoreExpensive == null) {
                 $branchMoreExpensive = $branchOffice;

@@ -10,7 +10,7 @@ design, leading to code that is easier to understand, modify, and test.
 
 ## Practical Example
 
-In the example we hava 3 classes.
+In the example we have 3 classes.
 
 1 - Delegation
 
@@ -38,6 +38,7 @@ In two of delegation functions we are broking the Demeter´s Law:
 getWeeklyWaste() ->
 
 ```
+<?php
 foreach ($this->getBranchOffices()[$i]->getEmployees() as $employee) {
     $amount = $amount + $employee->calculateEmployeeExpense();
 }
@@ -45,6 +46,7 @@ foreach ($this->getBranchOffices()[$i]->getEmployees() as $employee) {
 
 getEmployeeNameWithMostSalary() ->
 ```
+<?php
 if (
     $this->getBranchOffices()[$i]->getEmployeeMoreExpensive()->calculateEmployeeExpense() >
     $branchMoreExpensive->getEmployeeMoreExpensive()->calculateEmployeeExpense()
@@ -53,6 +55,6 @@ if (
 }
 ```
 
-Why? Becouse we are accesing to a property of a class from another class that is not immediate.
+Why? Because we are accesing to a property of a class from another class that is not immediate.
 
-¿¿You can fix it??
+Can you fix it??

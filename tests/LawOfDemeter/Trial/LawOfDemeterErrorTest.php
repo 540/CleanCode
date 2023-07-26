@@ -39,6 +39,7 @@ final class LawOfDemeterErrorTest extends TestCase
      */
     public function getDelegationWeekExpense(): void
     {
+        $this->markTestSkipped('To be implemented to validate the trial');
         $expectedPrice = 0.0;
         $this->assertEquals($expectedPrice, $this->delegacion->getWeeklyWaste());
     }
@@ -48,6 +49,7 @@ final class LawOfDemeterErrorTest extends TestCase
      */
     public function getTheNameOfTheMostPaidEmployeeInTheWeek(): void
     {
+        $this->markTestSkipped('To be implemented to validate the trial');
         $employeeName = "";
         $this->assertEquals($employeeName, $this->delegacion->getEmployeeNameWithMostSalary());
     }

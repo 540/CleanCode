@@ -49,6 +49,6 @@ final class LawOfDemeterTest extends TestCase
     public function getTheNameOfTheMostPaidEmployeeInTheWeek(): void
     {
         $employeeName = "Asier";
-        $this->assertEquals($employeeName, $this->delegation->getEmployeeNameWithMostSalary());
+        $this->assertEquals($employeeName, $this->delegation->getEmployeeNameWithBestSalary());
     }
 }

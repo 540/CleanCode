@@ -41,11 +41,11 @@ class BranchOffice
 
     public function calculateWeeklyExpense(): float
     {
-        $suma = 0.0;
+        $amount = 0.0;
         foreach ($this->employees as $employee) {
-            $suma = $suma + $employee->calculateEmployeeExpense();
+            $amount = $amount + $employee->calculateEmployeeExpense();
         }
-        return $suma;
+        return $amount;
     }
 
     public function getEmployeeMoreExpensive(): Employee

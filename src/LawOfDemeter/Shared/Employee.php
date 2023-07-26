@@ -25,16 +25,6 @@ class Employee
         return $this->name;
     }
 
-    public function getWorkedHours(): int
-    {
-        return $this->workedHours;
-    }
-
-    public function getHourPrice(): float
-    {
-        return $this->pricePerHour;
-    }
-
     public function calculateEmployeeExpense(): float
     {
         return $this->workedHours * $this->pricePerHour;

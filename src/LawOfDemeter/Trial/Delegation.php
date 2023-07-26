@@ -24,7 +24,7 @@ class Delegation
         return $this->branchOffices;
     }
 
-    public function insertBranchOffice(BranchOffice $branchOffice)
+    public function insertBranchOffice(BranchOffice $branchOffice): void
     {
         $this->branchOffices[] = $branchOffice;
     }
