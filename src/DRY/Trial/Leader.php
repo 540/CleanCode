@@ -4,6 +4,7 @@ namespace Deg540\PHPTestingBoilerplate\DRY\Error;
 
 class Leader
 {
+    //Here we are broking the DRY principle
     protected string $name;
     protected string $email;
     protected string $phoneNumber;

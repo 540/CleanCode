@@ -4,6 +4,7 @@ namespace Deg540\PHPTestingBoilerplate\DRY\Error;
 
 class Developer
 {
+    //Here we are broking the DRY principle
     protected string $name;
     protected string $email;
     protected string $phoneNumber;
@@ -30,17 +31,17 @@ class Developer
     {
         return 'Name: ' . $this->name;
     }
-    
+
     public function getEmail(): string
     {
         return 'Email: ' . $this->email;
     }
-    
+
     public function getPhoneNumber(): string
     {
         return 'PhoneNumber: ' . $this->phoneNumber;
     }
-    
+
     public function getPassword(): string
     {
         return 'Password: ' . $this->password;
