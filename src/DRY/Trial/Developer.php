@@ -1,26 +1,29 @@
 <?php
 
-namespace Deg540\PHPTestingBoilerplate\DRY\Success;
+namespace Deg540\PHPTestingBoilerplate\DRY\Error;
 
-abstract class Worker
+class Developer
 {
     protected string $name;
     protected string $email;
     protected string $phoneNumber;
     protected string $password;
+    protected array $tasksToDevelop = [];
 
     /**
      * @param $name
      * @param $email
      * @param $phoneNumber
      * @param $password
+     * @param array $tasks
      */
-    public function __construct($name, $email, $phoneNumber, $password)
+    public function __construct($name, $email, $phoneNumber, $password, array $tasks)
     {
         $this->name = $name;
         $this->email = $email;
         $this->phoneNumber = $phoneNumber;
         $this->password = $password;
+        $this->tasksToDevelop = $tasks;
     }
 
     public function getName(): string
@@ -45,6 +48,17 @@ abstract class Worker
 
     public function getAllData(): string
     {
-        return $this->getName() . ' ' . $this->getEmail() . ' ' . $this->getPhoneNumber() . ' ' . $this->getPassword();
+        return 'Name: ' . $this->getName() .
+            ' Email: ' . $this->getEmail() .
+            ' PhoneNumber: ' . $this->getPhoneNumber() .
+            ' Password: ' . $this->getPassword();
+    }
+
+    public function tasksToDevelop(): string
+    {
+        if (empty($this->tasksToDevelop)) {
+            return 'You have no tasks to develop';
+        }
+        return 'You have tasks to develop';
     }
 }

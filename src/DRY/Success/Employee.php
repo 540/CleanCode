@@ -1,29 +1,26 @@
 <?php
 
-namespace Deg540\PHPTestingBoilerplate\DRY\Error;
+namespace Deg540\PHPTestingBoilerplate\DRY\Success;
 
-class Administrator
+abstract class Employee
 {
     protected string $name;
     protected string $email;
     protected string $phoneNumber;
     protected string $password;
-    protected array $tasksToManage = [];
 
     /**
      * @param $name
      * @param $email
      * @param $phoneNumber
      * @param $password
-     * @param array $tasks
      */
-    public function __construct($name, $email, $phoneNumber, $password, array $tasks)
+    public function __construct($name, $email, $phoneNumber, $password)
     {
         $this->name = $name;
         $this->email = $email;
         $this->phoneNumber = $phoneNumber;
         $this->password = $password;
-        $this->tasksToManage = $tasks;
     }
 
     public function getName(): string
@@ -48,17 +45,6 @@ class Administrator
 
     public function getAllData(): string
     {
-        return 'Name: ' . $this->getName() .
-            ' Email: ' . $this->getEmail() .
-            ' PhoneNumber: ' . $this->getPhoneNumber() .
-            ' Password: ' . $this->getPassword();
-    }
-
-    public function tasksToManage(): string
-    {
-        if (empty($this->tasksToManage)) {
-            return 'You have no tasks to manage';
-        }
-        return 'You have tasks to manage';
+        return $this->getName() . ' ' . $this->getEmail() . ' ' . $this->getPhoneNumber() . ' ' . $this->getPassword();
     }
 }
