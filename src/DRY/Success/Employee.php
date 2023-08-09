@@ -8,19 +8,22 @@ abstract class Employee
     protected string $email;
     protected string $phoneNumber;
     protected string $password;
+    protected array $tasksToWork;
 
     /**
-     * @param $name
-     * @param $email
-     * @param $phoneNumber
-     * @param $password
+     * @param string $name
+     * @param string $email
+     * @param string $phoneNumber
+     * @param string $password
+     * @param array $tasksToWork
      */
-    public function __construct($name, $email, $phoneNumber, $password)
+    public function __construct(string $name, string $email, string $phoneNumber, string $password, array $tasksToWork)
     {
         $this->name = $name;
         $this->email = $email;
         $this->phoneNumber = $phoneNumber;
         $this->password = $password;
+        $this->tasksToWork = $tasksToWork;
     }
 
     public function getName(): string
@@ -41,6 +44,14 @@ abstract class Employee
     public function getPassword(): string
     {
         return 'Password: ' . $this->password;
+    }
+
+    /**
+     * @return array
+     */
+    public function getTasksToWork(): array
+    {
+        return $this->tasksToWork;
     }
 
     public function getAllData(): string
