@@ -1,6 +1,6 @@
 <?php
 
-namespace Deg540\PHPTestingBoilerplate\Test\DRY\Error;
+namespace Deg540\PHPTestingBoilerplate\Test\DRY\Success;
 
 use Deg540\PHPTestingBoilerplate\DRY\Success\Developer;
 use PHPUnit\Framework\TestCase;

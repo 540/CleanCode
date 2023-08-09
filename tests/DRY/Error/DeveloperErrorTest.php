@@ -2,7 +2,7 @@
 
 namespace Deg540\PHPTestingBoilerplate\Test\DRY\Error;
 
-use Deg540\PHPTestingBoilerplate\DRY\Success\Developer;
+use Deg540\PHPTestingBoilerplate\DRY\Error\Developer;
 use PHPUnit\Framework\TestCase;
 
 class DeveloperErrorTest extends TestCase
@@ -53,8 +53,8 @@ class DeveloperErrorTest extends TestCase
      */
     public function noTasksToDevelop()
     {
-        $tasksEtxebe = $this->etxebe->tasksToBeProgrammed();
-        $tasksAsier = $this->asier->tasksToBeProgrammed();
+        $tasksEtxebe = $this->etxebe->tasksToDevelop();
+        $tasksAsier = $this->asier->tasksToDevelop();
 
         $this->assertEquals('You have no tasks to develop', $tasksEtxebe);
         $this->assertEquals('You have tasks to develop', $tasksAsier);

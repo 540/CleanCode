@@ -1,8 +1,8 @@
 <?php
 
-namespace Deg540\PHPTestingBoilerplate\Test\DRY\Error;
+namespace Deg540\PHPTestingBoilerplate\Test\DRY\Trial;
 
-use Deg540\PHPTestingBoilerplate\DRY\Success\Leader;
+use Deg540\PHPTestingBoilerplate\DRY\Trial\Leader;
 use PHPUnit\Framework\TestCase;
 
 class LeaderTrialTest extends TestCase

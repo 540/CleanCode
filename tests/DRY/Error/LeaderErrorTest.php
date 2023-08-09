@@ -2,7 +2,7 @@
 
 namespace Deg540\PHPTestingBoilerplate\Test\DRY\Error;
 
-use Deg540\PHPTestingBoilerplate\DRY\Success\Leader;
+use Deg540\PHPTestingBoilerplate\DRY\Error\Leader;
 use PHPUnit\Framework\TestCase;
 
 class LeaderErrorTest extends TestCase

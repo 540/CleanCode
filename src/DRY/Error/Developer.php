@@ -49,10 +49,10 @@ class Developer
 
     public function getAllData(): string
     {
-        return 'Name: ' . $this->getName() .
-            ' Email: ' . $this->getEmail() .
-            ' PhoneNumber: ' . $this->getPhoneNumber() .
-            ' Password: ' . $this->getPassword();
+        return  $this->getName() .
+            ' ' . $this->getEmail() .
+            ' ' . $this->getPhoneNumber() .
+            ' ' . $this->getPassword();
     }
 
     public function tasksToDevelop(): string
