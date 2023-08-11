@@ -6,7 +6,7 @@
         beStrictAboutChangesToGlobalState="true">
     <testsuites>
         <testsuite name="PHPTestingBoilerplate">
-            <directory>tests</directory>
+            <directory suffix="Test.php">./tests</directory>
         </testsuite>
     </testsuites>
 </phpunit>
