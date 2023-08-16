@@ -58,7 +58,7 @@ class Employee
         $this->kindOfBranchOffice = $kindOfBranchOffice;
     }
 
-    public function calculateExpense(): float
+    public function calculateSalary(): float
     {
         /**
          * Moving this method to Employee class we can resolve feature envy error

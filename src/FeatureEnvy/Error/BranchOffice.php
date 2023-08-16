@@ -35,16 +35,16 @@ class BranchOffice
         $this->employees[] = $employee;
     }
 
-    public function calculateExpenses(): float
+    public function calculateSalary(): float
     {
-        $expense = 0.0;
+        $salary = 0.0;
         foreach ($this->getEmployees() as $employee) {
-            $expense = $expense + $this->calculateExpenseOfEmployee($employee);
+            $salary = $salary + $this->calculateSalaryOfEmployee($employee);
         }
-        return $expense;
+        return $salary;
     }
 
-    private function calculateExpenseOfEmployee(Employee $employee): float
+    private function calculateSalaryOfEmployee(Employee $employee): float
     {
         /**
          * This is an example of Feature envy.

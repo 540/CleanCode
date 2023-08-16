@@ -11,7 +11,7 @@ final class FeatureEnvyTest extends TestCase
     /**
      * @test
      */
-    public function getBranchOfficeWeekExpense(): void
+    public function getBranchOfficeWeekSalary(): void
     {
         $employee1 = new Employee("Asier", 40, 30.5);
         $employee2 = new Employee("Javier", 20, 40.9);
@@ -23,6 +23,6 @@ final class FeatureEnvyTest extends TestCase
         $branchOffice->insertEmployee($employee3);
 
         $expectedPrice = 3209.4;
-        $this->assertEquals($expectedPrice, $branchOffice->calculateExpenses());
+        $this->assertEquals($expectedPrice, $branchOffice->calculateSalary());
     }
 }

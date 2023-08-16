@@ -34,12 +34,12 @@ class BranchOffice
         $this->employees[] = $employee;
     }
 
-    public function calculateExpenses(): float
+    public function calculateSalary(): float
     {
-        $expense = 0.0;
+        $salary = 0.0;
         foreach ($this->getEmployees() as $employee) {
-            $expense = $expense + $employee->calculateExpense();
+            $salary = $salary + $employee->calculateSalary();
         }
-        return $expense;
+        return $salary;
     }
 }
