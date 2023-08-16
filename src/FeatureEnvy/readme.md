@@ -16,7 +16,7 @@ It's a simple class of an object with some attributes and functions.
 In one of branch office function we are breaking the feature envy:
 
 ```php
-private function calculateExpenseOfEmployee(Employee $employee): float
+private function calculateSalaryOfEmployee(Employee $employee): float
 {
     $totalHours = $employee->getWorkedHours();
     switch ($employee->getKindOfBranchOffice()){
