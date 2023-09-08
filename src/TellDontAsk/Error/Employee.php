@@ -8,11 +8,6 @@ class Employee
     private int $workedHours;
     private float $pricePerHour;
 
-    /**
-     * @param string $name
-     * @param int $workedHours
-     * @param float $pricePerHour
-     */
     public function __construct(string $name, int $workedHours, float $pricePerHour)
     {
         $this->name = $name;

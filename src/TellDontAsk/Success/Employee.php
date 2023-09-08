@@ -10,11 +10,6 @@ class Employee
 
     private const BIG_SALARY = 750;
 
-    /**
-     * @param string $name
-     * @param int $workedHours
-     * @param float $pricePerHour
-     */
     public function __construct(string $name, int $workedHours, float $pricePerHour)
     {
         $this->name = $name;
@@ -27,9 +22,6 @@ class Employee
         return $this->name;
     }
 
-    /**
-     * @return bool
-     */
     public function hasBigSalary(): bool
     {
         return $this->pricePerHour * $this->workedHours > self::BIG_SALARY;
