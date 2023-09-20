@@ -1,14 +1,17 @@
 <?php
 
-namespace Deg540\PHPTestingBoilerplate\Test\SOLID\SingleResponsabilityPrinciple\Error;
+namespace Deg540\PHPTestingBoilerplate\Test\SOLID\SingleResponsabilityPrinciple\Success;
 
-use Deg540\PHPTestingBoilerplate\SOLID\SingleResponsabilityPrinciple\Error\BranchOffice;
-use Deg540\PHPTestingBoilerplate\SOLID\SingleResponsabilityPrinciple\Error\Employee;
+use Deg540\PHPTestingBoilerplate\SOLID\SingleResponsabilityPrinciple\Success\BranchOffice;
+use Deg540\PHPTestingBoilerplate\SOLID\SingleResponsabilityPrinciple\Success\BranchOfficeEmployeesManagement;
+use Deg540\PHPTestingBoilerplate\SOLID\SingleResponsabilityPrinciple\Success\BranchOfficeWasteCalculator;
+use Deg540\PHPTestingBoilerplate\SOLID\SingleResponsabilityPrinciple\Success\Employee;
 use PHPUnit\Framework\TestCase;
 
-class BranchOfficeTest extends TestCase
+class BranchOfficeEmployeesManagementTest extends TestCase
 {
     private BranchOffice $branchOffice;
+    private BranchOfficeEmployeesManagement $officeEmployeesManagement;
 
     protected function setUp(): void
     {
@@ -19,29 +22,22 @@ class BranchOfficeTest extends TestCase
         $employee3 = new Employee("Iker", 10, 100.0);
         $employee4 = new Employee("Fieldeas Developer", 1000, 1.0);
 
-        $this->branchOffice = new BranchOffice();
+        $this->branchOffice = new BranchOffice([]);
         $this->branchOffice->insertEmployee($employee1);
         $this->branchOffice->insertEmployee($employee2);
         $this->branchOffice->insertEmployee($employee3);
         $this->branchOffice->insertEmployee($employee4);
         $this->branchOffice->removeEmployee($employee4);
+
+        $this->officeEmployeesManagement = new BranchOfficeEmployeesManagement($this->branchOffice);
     }
     
-    /**
-     * @test
-     */
-    public function getBranchOfficeWaste(): void
-    {
-        $expectedPrice = 3038;
-        $this->assertEquals($expectedPrice, $this->branchOffice->calculateWasteOfEmployees());
-    }
-
     /**
      * @test
      */
     public function getBranchOfficeEmployeesData(): void
     {
         $expectedData = 'Name: Asier, Salary: 1220 || Name: Javier, Salary: 818 || Name: Iker, Salary: 1000';
-        $this->assertEquals($expectedData, $this->branchOffice->getEmployeesData());
+        $this->assertEquals($expectedData, $this->officeEmployeesManagement->getEmployeesData());
     }
 }

@@ -1,9 +1,9 @@
 <?php
 
-namespace Deg540\PHPTestingBoilerplate\Test\SOLID\SingleResponsabilityPrinciple\Error;
+namespace Deg540\PHPTestingBoilerplate\Test\SOLID\SingleResponsabilityPrinciple\Trial;
 
-use Deg540\PHPTestingBoilerplate\SOLID\SingleResponsabilityPrinciple\Error\BranchOffice;
-use Deg540\PHPTestingBoilerplate\SOLID\SingleResponsabilityPrinciple\Error\Employee;
+use Deg540\PHPTestingBoilerplate\SOLID\SingleResponsabilityPrinciple\Trial\BranchOffice;
+use Deg540\PHPTestingBoilerplate\SOLID\SingleResponsabilityPrinciple\Trial\Employee;
 use PHPUnit\Framework\TestCase;
 
 class BranchOfficeTest extends TestCase
@@ -26,7 +26,6 @@ class BranchOfficeTest extends TestCase
         $this->branchOffice->insertEmployee($employee4);
         $this->branchOffice->removeEmployee($employee4);
     }
-    
     /**
      * @test
      */
