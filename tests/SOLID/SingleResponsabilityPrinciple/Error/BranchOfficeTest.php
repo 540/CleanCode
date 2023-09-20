@@ -26,7 +26,7 @@ class BranchOfficeTest extends TestCase
         $this->branchOffice->insertEmployee($employee4);
         $this->branchOffice->removeEmployee($employee4);
     }
-    
+
     /**
      * @test
      */

@@ -31,7 +31,7 @@ class BranchOfficeEmployeesManagementTest extends TestCase
 
         $this->officeEmployeesManagement = new BranchOfficeEmployeesManagement($this->branchOffice);
     }
-    
+
     /**
      * @test
      */
