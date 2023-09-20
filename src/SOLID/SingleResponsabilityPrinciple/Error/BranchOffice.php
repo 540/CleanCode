@@ -22,7 +22,7 @@ class BranchOffice
             }
         }
     }
-
+    // In this class we have several responsibilities
     public function getEmployeesData(): string
     {
         $employeeData = '';
