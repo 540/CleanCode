@@ -4,13 +4,14 @@ namespace Deg540\PHPTestingBoilerplate\SOLID\SingleResponsabilityPrinciple\Succe
 
 class BranchOfficeEmployeesManagement
 {
-    private BranchOffice $branchOffice;
+    /**
+     * @var Employee[]
+     */
     private array $employees;
 
     public function __construct(BranchOffice $branchOffice)
     {
-        $this->branchOffice = $branchOffice;
-        $this->employees = $this->branchOffice->getEmployees();
+        $this->employees = $branchOffice->getEmployees();
     }
 
     public function getEmployeesData(): string
@@ -20,7 +21,7 @@ class BranchOfficeEmployeesManagement
             if (!empty($employeeData)) {
                 $employeeData .= ' || ';
             }
-            $employeeData .= 'Name: ' . $employee->getName() . ', Salary: ' . $employee->calculateSalary();
+            $employeeData .= $employee->getData();
         }
 
         return $employeeData;

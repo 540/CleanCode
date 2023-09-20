@@ -9,6 +9,9 @@ class BranchOffice
      */
     private array $employees;
 
+    /**
+     * @param Employee[] $employees
+     */
     public function __construct(array $employees)
     {
         $this->employees = $employees;

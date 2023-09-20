@@ -3,7 +3,6 @@
 namespace Deg540\PHPTestingBoilerplate\Test\SOLID\SingleResponsabilityPrinciple\Success;
 
 use Deg540\PHPTestingBoilerplate\SOLID\SingleResponsabilityPrinciple\Success\BranchOffice;
-use Deg540\PHPTestingBoilerplate\SOLID\SingleResponsabilityPrinciple\Success\BranchOfficeEmployeesManagement;
 use Deg540\PHPTestingBoilerplate\SOLID\SingleResponsabilityPrinciple\Success\BranchOfficeWasteCalculator;
 use Deg540\PHPTestingBoilerplate\SOLID\SingleResponsabilityPrinciple\Success\Employee;
 use PHPUnit\Framework\TestCase;
@@ -11,7 +10,7 @@ use PHPUnit\Framework\TestCase;
 class BranchOfficeWasteCalculatorTest extends TestCase
 {
     private BranchOffice $branchOffice;
-    private BranchOfficeWasteCalculator $officeWasteCalculator;
+    private BranchOfficeWasteCalculator $wasteCalculator;
 
     protected function setUp(): void
     {
@@ -29,7 +28,7 @@ class BranchOfficeWasteCalculatorTest extends TestCase
         $this->branchOffice->insertEmployee($employee4);
         $this->branchOffice->removeEmployee($employee4);
 
-        $this->officeWasteCalculator = new BranchOfficeWasteCalculator($this->branchOffice);
+        $this->wasteCalculator = new BranchOfficeWasteCalculator($this->branchOffice);
     }
 
     /**
@@ -38,6 +37,6 @@ class BranchOfficeWasteCalculatorTest extends TestCase
     public function getBranchOfficeWaste(): void
     {
         $expectedPrice = 3038;
-        $this->assertEquals($expectedPrice, $this->officeWasteCalculator->calculateWasteOfEmployees());
+        $this->assertEquals($expectedPrice, $this->wasteCalculator->calculateWasteOfEmployees());
     }
 }

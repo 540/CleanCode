@@ -4,14 +4,13 @@ namespace Deg540\PHPTestingBoilerplate\Test\SOLID\SingleResponsabilityPrinciple\
 
 use Deg540\PHPTestingBoilerplate\SOLID\SingleResponsabilityPrinciple\Success\BranchOffice;
 use Deg540\PHPTestingBoilerplate\SOLID\SingleResponsabilityPrinciple\Success\BranchOfficeEmployeesManagement;
-use Deg540\PHPTestingBoilerplate\SOLID\SingleResponsabilityPrinciple\Success\BranchOfficeWasteCalculator;
 use Deg540\PHPTestingBoilerplate\SOLID\SingleResponsabilityPrinciple\Success\Employee;
 use PHPUnit\Framework\TestCase;
 
 class BranchOfficeEmployeesManagementTest extends TestCase
 {
     private BranchOffice $branchOffice;
-    private BranchOfficeEmployeesManagement $officeEmployeesManagement;
+    private BranchOfficeEmployeesManagement $officeEmployeesManag;
 
     protected function setUp(): void
     {
@@ -29,7 +28,7 @@ class BranchOfficeEmployeesManagementTest extends TestCase
         $this->branchOffice->insertEmployee($employee4);
         $this->branchOffice->removeEmployee($employee4);
 
-        $this->officeEmployeesManagement = new BranchOfficeEmployeesManagement($this->branchOffice);
+        $this->officeEmployeesManag = new BranchOfficeEmployeesManagement($this->branchOffice);
     }
 
     /**
@@ -38,6 +37,6 @@ class BranchOfficeEmployeesManagementTest extends TestCase
     public function getBranchOfficeEmployeesData(): void
     {
         $expectedData = 'Name: Asier, Salary: 1220 || Name: Javier, Salary: 818 || Name: Iker, Salary: 1000';
-        $this->assertEquals($expectedData, $this->officeEmployeesManagement->getEmployeesData());
+        $this->assertEquals($expectedData, $this->officeEmployeesManag->getEmployeesData());
     }
 }

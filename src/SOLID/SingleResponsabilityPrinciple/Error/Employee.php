@@ -17,11 +17,16 @@ class Employee
 
     public function calculateSalary(): float
     {
-        return floatval($this->pricePerHour * $this->workedHours);
+        return $this->pricePerHour * $this->workedHours;
     }
 
     public function getName(): string
     {
         return $this->name;
+    }
+
+    public function getData(): string
+    {
+        return 'Name: ' . $this->getName() . ', Salary: ' . $this->calculateSalary();
     }
 }

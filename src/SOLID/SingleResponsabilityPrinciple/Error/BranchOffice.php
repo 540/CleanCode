@@ -22,6 +22,7 @@ class BranchOffice
             }
         }
     }
+
     // In this class we have several responsibilities
     public function getEmployeesData(): string
     {
@@ -30,7 +31,8 @@ class BranchOffice
             if (!empty($employeeData)) {
                 $employeeData .= ' || ';
             }
-            $employeeData .= 'Name: ' . $employee->getName() . ', Salary: ' . $employee->calculateSalary();
+
+            $employeeData .= $employee->getData();
         }
 
         return $employeeData;
