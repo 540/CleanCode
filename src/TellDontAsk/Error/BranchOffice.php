@@ -25,7 +25,7 @@ class BranchOffice
         foreach ($this->employees as $employee) {
             /*
              * We break the rule Tell, don't ask
-             * We ask to the employee for his worked hours and his price
+             * We ask the employee for his worked hours and his price
              * We can extract this lines to a new method in employee and
              * use this new method in others methods.
             */
@@ -33,6 +33,7 @@ class BranchOffice
                 $namesWithBigSalary[] = $employee->getName();
             }
         }
+
         return implode(", ", $namesWithBigSalary);
     }
 }

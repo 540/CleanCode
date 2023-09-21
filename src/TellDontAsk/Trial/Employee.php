@@ -1,6 +1,6 @@
 <?php
 
-namespace Deg540\PHPTestingBoilerplate\TellDontAsk\Error;
+namespace Deg540\PHPTestingBoilerplate\TellDontAsk\Trial;
 
 class Employee
 {

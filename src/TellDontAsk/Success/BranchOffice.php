@@ -24,7 +24,7 @@ class BranchOffice
         $namesWithBigSalary = array();
         foreach ($this->employees as $employee) {
             /*
-             * Now, if we can use the method hasBigSalary in other parts of the code
+             * Now, we can use the method hasBigSalary in other parts of the code
              * We only have a form to calculate and if it changes, it changes for all
              */
             if ($employee->hasBigSalary()) {

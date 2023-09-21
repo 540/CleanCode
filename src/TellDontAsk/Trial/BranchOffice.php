@@ -1,6 +1,6 @@
 <?php
 
-namespace Deg540\PHPTestingBoilerplate\TellDontAsk\Error;
+namespace Deg540\PHPTestingBoilerplate\TellDontAsk\Trial;
 
 class BranchOffice
 {
@@ -28,6 +28,7 @@ class BranchOffice
                 $namesWithBigSalary[] = $employee->getName();
             }
         }
+
         return implode(", ", $namesWithBigSalary);
     }
 }
