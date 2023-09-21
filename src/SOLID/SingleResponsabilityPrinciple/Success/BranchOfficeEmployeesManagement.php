@@ -16,14 +16,10 @@ class BranchOfficeEmployeesManagement
 
     public function getEmployeesData(): string
     {
-        $employeeData = '';
-        foreach ($this->employees as $employee) {
-            if (!empty($employeeData)) {
-                $employeeData .= ' || ';
-            }
-            $employeeData .= $employee->getData();
-        }
+        $data = array_map(function ($employee) {
+            return $employee->getData();
+        }, $this->employees);
 
-        return $employeeData;
+        return implode(' || ', $data);
     }
 }

@@ -26,16 +26,11 @@ class BranchOffice
     // In this class we have several responsibilities
     public function getEmployeesData(): string
     {
-        $employeeData = '';
-        foreach ($this->employees as $employee) {
-            if (!empty($employeeData)) {
-                $employeeData .= ' || ';
-            }
+        $data = array_map(function ($employee) {
+            return $employee->getData();
+        }, $this->employees);
 
-            $employeeData .= $employee->getData();
-        }
-
-        return $employeeData;
+        return implode(' || ', $data);
     }
 
     public function calculateWasteOfEmployees(): float
