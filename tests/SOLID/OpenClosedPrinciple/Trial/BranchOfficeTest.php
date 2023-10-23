@@ -15,8 +15,8 @@ class BranchOfficeTest extends TestCase
     {
         parent::setUp();
 
-        $employee1 = new FrontEndDeveloper("Asier", 'login view');
-        $employee2 = new BackEndDeveloper("Javier", 'login database');
+        $employee1 = new FrontEndDeveloper('Asier', 'login view');
+        $employee2 = new BackEndDeveloper('Javier', 'login database');
 
         $this->branchOffice = new BranchOffice();
         $this->branchOffice->insertFrontEndDeveloper($employee1);
