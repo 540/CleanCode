@@ -4,7 +4,5 @@ namespace Deg540\PHPTestingBoilerplate\SOLID\InterfaceSegregationPrinciple\Succe
 
 interface LeaderInterface
 {
-    public function startWorkDay(string $startHour): void;
-    public function finishWorkDay(string $finishHour): void;
     public function manageEmployees(): void;
 }

@@ -4,7 +4,7 @@ namespace Deg540\PHPTestingBoilerplate\SOLID\InterfaceSegregationPrinciple\Succe
 
 use Exception;
 
-class Leader implements LeaderInterface
+class Leader implements Employee, LeaderInterface
 {
     /**
      * @throws Exception

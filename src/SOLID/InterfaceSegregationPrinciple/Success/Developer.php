@@ -4,7 +4,7 @@ namespace Deg540\PHPTestingBoilerplate\SOLID\InterfaceSegregationPrinciple\Succe
 
 use Exception;
 
-class Developer implements DeveloperInterface
+class Developer implements Employee, DeveloperInterface
 {
     /**
      * @throws Exception
