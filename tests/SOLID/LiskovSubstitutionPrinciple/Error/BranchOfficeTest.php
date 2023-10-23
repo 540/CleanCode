@@ -23,7 +23,7 @@ class BranchOfficeTest extends TestCase
         );
 
         $this->branchOffice = new BranchOffice();
-        $this->branchOffice->insertDevelopers($backEndDeveloper);
+        $this->branchOffice->insertDeveloper($backEndDeveloper);
     }
 
     /**
@@ -31,9 +31,11 @@ class BranchOfficeTest extends TestCase
      */
     public function getBranchOfficeEmployeesData(): void
     {
+        $expectedResponse = 'Name: Javier Email: javier@gmail.com Phone Number: +34 666 666 666' .
+            ' Password: password Role: BackEndDeveloper';
+
         $this->assertEquals(
-            'Name: Javier Email: javier@gmail.com Phone Number: +34 666 666 666' .
-            ' Password: password Role: BackEndDeveloper',
+            $expectedResponse,
             $this->branchOffice->getDevelopersData()
         );
     }

@@ -9,7 +9,7 @@ class BranchOffice
      */
     private array $developers;
 
-    public function insertDevelopers(Developer $developer): void
+    public function insertDeveloper(Developer $developer): void
     {
         $this->developers[] = $developer;
     }

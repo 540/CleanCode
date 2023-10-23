@@ -8,15 +8,13 @@ class Developer
     protected string $email;
     protected string $phoneNumber;
     protected string $password;
-    protected array $tasksToDevelop = [];
 
-    public function __construct($name, $email, $phoneNumber, $password, array $tasks)
+    public function __construct($name, $email, $phoneNumber, $password)
     {
         $this->name = $name;
         $this->email = $email;
         $this->phoneNumber = $phoneNumber;
         $this->password = $password;
-        $this->tasksToDevelop = $tasks;
     }
 
     public function getName(): string
