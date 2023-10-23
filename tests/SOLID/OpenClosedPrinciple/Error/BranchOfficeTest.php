@@ -28,7 +28,9 @@ class BranchOfficeTest extends TestCase
      */
     public function getBranchOfficeEmployeesData(): void
     {
-        $expectedData = 'Asier is laying out login view || Javier is implementing login database';
-        $this->assertEquals($expectedData, $this->branchOffice->startWork());
+        $this->assertEquals(
+            'Asier is laying out login view || Javier is implementing login database',
+            $this->branchOffice->startWork()
+        );
     }
 }
