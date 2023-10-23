@@ -17,7 +17,7 @@ class BranchOffice
     public function startCicle(): string
     {
         $data = array_map(function ($employee) {
-            return $employee->doWork();
+            return $employee->develop();
         }, $this->employees);
 
         return implode(' || ', $data);

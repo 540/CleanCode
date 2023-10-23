@@ -30,11 +30,11 @@ class BranchOffice
     public function startCicle(): string
     {
         $frontEndWork = array_map(function ($employee) {
-            return $employee->doWork();
+            return $employee->develop();
         }, $this->frontEndDevelopers);
 
         $backEndWork = array_map(function ($employee) {
-            return $employee->doWork();
+            return $employee->develop();
         }, $this->backEndDevelopers);
 
         return implode(' || ', array_merge($frontEndWork, $backEndWork));

@@ -13,7 +13,7 @@ class BackEndDeveloper implements Employee
         $this->program = $program;
     }
 
-    public function doWork(): string
+    public function develop(): string
     {
         return $this->name . ' is implementing ' . $this->program;
     }
