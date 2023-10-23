@@ -15,6 +15,6 @@ class FrontEndDeveloper implements Employee
 
     public function doWork(): string
     {
-        return $this->name . ' is developing ' . $this->program;
+        return $this->name . ' is laying out ' . $this->program;
     }
 }
