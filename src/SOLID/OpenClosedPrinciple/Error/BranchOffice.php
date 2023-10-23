@@ -27,7 +27,7 @@ class BranchOffice
         $this->backEndDevelopers[] = $backEndDeveloper;
     }
 
-    public function startWork(): string
+    public function startCicle(): string
     {
         $frontEndWork = array_map(function ($employee) {
             return $employee->doWork();

@@ -14,7 +14,7 @@ class BranchOffice
         $this->employees[] = $employee;
     }
 
-    public function startWork(): string
+    public function startCicle(): string
     {
         $data = array_map(function ($employee) {
             return $employee->doWork();
