@@ -7,6 +7,6 @@ and assemblies, which forces programmers to create new classes that can plug int
 
 ## Error case
 
-In the BranchOffice we have more than one kind of employee, one class for each kind so we broke OCP
+In the BranchOffice we have more than one kind of employee, one class for each kind, so we broke OCP
 
 Can you fix it??
