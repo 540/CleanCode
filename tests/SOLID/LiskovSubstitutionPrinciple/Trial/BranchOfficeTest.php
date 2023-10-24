@@ -4,6 +4,8 @@ namespace Deg540\PHPTestingBoilerplate\Test\SOLID\LiskovSubstitutionPrinciple\Tr
 
 use Deg540\PHPTestingBoilerplate\SOLID\LiskovSubstitutionPrinciple\Trial\BackEndDeveloper;
 use Deg540\PHPTestingBoilerplate\SOLID\LiskovSubstitutionPrinciple\Trial\BranchOffice;
+use Deg540\PHPTestingBoilerplate\SOLID\LiskovSubstitutionPrinciple\Trial\Developer;
+use Exception;
 use PHPUnit\Framework\TestCase;
 
 class BranchOfficeTest extends TestCase
@@ -14,29 +16,33 @@ class BranchOfficeTest extends TestCase
     {
         parent::setUp();
 
+        $developer = new Developer(
+            'Asier',
+            'asier.alba@540deg.com',
+            '+34 666 666 666',
+            'password'
+        );
+
         $backEndDeveloper = new BackEndDeveloper(
             'Javier',
-            'javier@gmail.com',
+            'javier@540deg.com',
             '+34 666 666 666',
-            'password',
-            ['login database']
+            'password'
         );
 
         $this->branchOffice = new BranchOffice();
-        $this->branchOffice->insertDeveloper($backEndDeveloper);
+        $this->branchOffice->addDeveloper($developer);
+        $this->branchOffice->addDeveloper($backEndDeveloper);
     }
 
     /**
      * @test
      */
-    public function getBranchOfficeEmployeesData(): void
+    public function backEndDeveloperDontKnowToProgramInHTMLException(): void
     {
-        $expectedResponse = 'Name: Javier Email: javier@gmail.com Phone Number: +34 666 666 666' .
-            ' Password: password Role: BackEndDeveloper';
+        $this->expectException(Exception::class);
+        $this->expectExceptionMessage('I don´t know how to program in HTML and I refuse to learn.');
 
-        $this->assertEquals(
-            $expectedResponse,
-            $this->branchOffice->getDevelopersData()
-        );
+        $this->branchOffice->sendDevelopersToDevelopInHTML();
     }
 }

@@ -4,13 +4,13 @@ namespace Deg540\PHPTestingBoilerplate\SOLID\LiskovSubstitutionPrinciple\Success
 
 class BackEndDeveloper extends Developer
 {
-    public function __construct($name, $email, $phoneNumber, $password, array $tasks)
+    public function __construct($name, $email, $phoneNumber, $password)
     {
-        parent::__construct($name, $email, $phoneNumber, $password, $tasks);
+        parent::__construct($name, $email, $phoneNumber, $password);
     }
 
-    public function getAllData(): string
+    public function developInHTML(): string
     {
-        return parent::getAllData() . ' Role: BackEndDeveloper';
+        return "I don´t know how to program in HTML and I refuse to learn.";
     }
 }

@@ -37,11 +37,8 @@ class Developer
         return 'Password: ' . $this->password;
     }
 
-    public function getAllData(): string
+    public function developInHTML(): string
     {
-        return  $this->getName() .
-            ' ' . $this->getEmail() .
-            ' ' . $this->getPhoneNumber() .
-            ' ' . $this->getPassword();
+        return "I´m " . $this->getName() . " and i´m developing a HTML login";
     }
 }

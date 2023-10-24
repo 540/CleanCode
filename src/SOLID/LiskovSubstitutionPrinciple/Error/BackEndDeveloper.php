@@ -2,20 +2,21 @@
 
 namespace Deg540\PHPTestingBoilerplate\SOLID\LiskovSubstitutionPrinciple\Error;
 
+use Exception;
+
 class BackEndDeveloper extends Developer
 {
-    public function __construct($name, $email, $phoneNumber, $password, array $tasks)
+    public function __construct($name, $email, $phoneNumber, $password)
     {
-        parent::__construct($name, $email, $phoneNumber, $password, $tasks);
+        parent::__construct($name, $email, $phoneNumber, $password);
     }
 
     // Here we are breaking the Liskov Substitution Principle
-    public function getAllData(): string
+    /**
+     * @throws Exception
+     */
+    public function developInHTML(): string
     {
-        return $this->getName() .
-            ' ' . $this->getEmail() .
-            ' ' . $this->getPhoneNumber() .
-            ' ' . $this->getPassword() .
-            ' Role: BackEndDeveloper';
+        throw new Exception('I don´t know how to program in HTML and I refuse to learn.');
     }
 }

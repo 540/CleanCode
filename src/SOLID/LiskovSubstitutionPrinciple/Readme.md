@@ -18,6 +18,9 @@ This is the expected behavior, because when we use inheritance we assume that th
 
 In short, Liskov's substitution principle is a valuable guide for the design of class hierarchies in object-oriented programming, improving software quality and reliability.
 
+## Article
+https://stackify.com/solid-design-liskov-substitution-principle/
+
 ## Error case
 
 In the BranchOffice we are breaking the principle that objects of a subclass should be able to be replaced by objects of the superclass without affecting the code.

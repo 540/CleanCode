@@ -9,15 +9,15 @@ class BranchOffice
      */
     private array $developers;
 
-    public function insertDeveloper(Developer $developer): void
+    public function addDeveloper(Developer $developer): void
     {
         $this->developers[] = $developer;
     }
 
-    public function getDevelopersData(): string
+    public function sendDevelopersToDevelopInHTML(): string
     {
         $data = array_map(function ($developer) {
-            return $developer->getAllData();
+            return $developer->developInHTML();
         }, $this->developers);
 
         return implode(' || ', $data);
