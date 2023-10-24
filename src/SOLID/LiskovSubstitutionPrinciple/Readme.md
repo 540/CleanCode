@@ -1,6 +1,6 @@
 # Liskov Substitution Principle
 
-The Liskov Substitution Principle is one of the five fundamental principles of object-oriented programming (OOP) and software design, and was formulated by Barbara Liskov in 1987. This principle is one of the pillars of type theory in OOP and focuses on the relationship between classes and their subclasses.
+The Liskov Substitution Principle is one of the five fundamental principles of object-oriented programming (OOP) and software design. It was formulated by Barbara Liskov in 1987. This principle is one of the pillars of type theory in OOP and focuses on the relationship between classes and their subclasses.
 
 Liskov's Substitution Principle states that subclasses should be substitutable for their base classes.
 
@@ -8,7 +8,7 @@ This means that since class B is a subclass of class A, we should be able to pas
 
 This is the expected behavior, because when we use inheritance we assume that the child class inherits everything that the superclass has. The child class extends the behavior but never reduces it.
 
-## ¿ What are the benefits of using the Liskov substitution principle ?
+## ¿ What are the benefits of using the Liskov Substitution Principle ?
 
 1 - It promotes coherence and consistency in class design, which makes code easier to understand and maintain.
 

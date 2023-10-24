@@ -16,10 +16,8 @@ class BranchOffice
 
     public function sendDevelopersToDevelopInHTML(): string
     {
-        $data = array_map(function ($developer) {
-            return $developer->developInHTML();
-        }, $this->developers);
+        $response = array_map(fn($developer) => $developer->developInHTML(), $this->developers);
 
-        return implode(' || ', $data);
+        return implode(' || ', $response);
     }
 }
