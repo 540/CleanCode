@@ -30,7 +30,7 @@ class BranchOfficeTest extends TestCase
     {
         $this->assertEquals(
             'Asier is laying out login view || Javier is implementing login database',
-            $this->branchOffice->startCicle()
+            $this->branchOffice->startSprint()
         );
     }
 }
