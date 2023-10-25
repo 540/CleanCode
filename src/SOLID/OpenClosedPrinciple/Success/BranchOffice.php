@@ -9,7 +9,7 @@ class BranchOffice
      */
     private array $employees;
 
-    public function insertEmployee(Employee $employee): void
+    public function addEmployee(Employee $employee): void
     {
         $this->employees[] = $employee;
     }

@@ -17,12 +17,12 @@ class BranchOffice
     /*
      * We need one method for any kind of employees.
      */
-    public function insertFrontEndDeveloper(FrontEndDeveloper $frontEndDeveloper): void
+    public function addFrontEndDeveloper(FrontEndDeveloper $frontEndDeveloper): void
     {
         $this->frontEndDevelopers[] = $frontEndDeveloper;
     }
 
-    public function insertBackEndDeveloper(BackEndDeveloper $backEndDeveloper): void
+    public function addBackEndDeveloper(BackEndDeveloper $backEndDeveloper): void
     {
         $this->backEndDevelopers[] = $backEndDeveloper;
     }
