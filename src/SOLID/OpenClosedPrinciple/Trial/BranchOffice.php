@@ -29,13 +29,8 @@ class BranchOffice
 
     public function startSprint(): string
     {
-        $frontEndWork = array_map(function ($employee) {
-            return $employee->develop();
-        }, $this->frontEndDevelopers);
-
-        $backEndWork = array_map(function ($employee) {
-            return $employee->develop();
-        }, $this->backEndDevelopers);
+        $frontEndWork = array_map(fn($employee) => $employee->develop(), $this->frontEndDevelopers);
+        $backEndWork = array_map(fn($employee) => $employee->develop(), $this->backEndDevelopers);
 
         return implode(' || ', array_merge($frontEndWork, $backEndWork));
     }

@@ -16,10 +16,8 @@ class BranchOffice
 
     public function startSprint(): string
     {
-        $data = array_map(function ($employee) {
-            return $employee->develop();
-        }, $this->employees);
+        $workToDevelop = array_map(fn($employee) => $employee->develop(), $this->employees);
 
-        return implode(' || ', $data);
+        return implode(' || ', $workToDevelop);
     }
 }
