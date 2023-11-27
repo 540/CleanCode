@@ -17,7 +17,7 @@ class BranchOffice
         $this->developers[] = $developers;
     }
 
-    public function startWork(): string
+    public function startSprint(): string
     {
         $developersWork = array_map(fn($employee) => $employee->develop(), $this->developers);
 

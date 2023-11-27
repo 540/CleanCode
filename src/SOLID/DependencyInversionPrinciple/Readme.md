@@ -10,7 +10,7 @@ Abstractions should not depend on details. Details must depend on abstractions.
 
 In other words, this principle promotes reversing the direction of dependencies in a system, so that high-level modules (such as core classes or business policies) do not depend on low-level modules (such as implementation classes or hardware-specific details). Instead, both should depend on common abstractions, which makes the system more flexible, easier to maintain and less prone to disruptive change.
 
-## ¿ What are the benefits of using the Liskov Substitution Principle ?
+## ¿ What are the benefits of using the Dependency Inversion Principle ?
 
 DIP encourages separation of concerns and allows the replacement of specific components without affecting the behavior of high-level modules, which contributes to the scalability and robustness of the system. In summary, the Dependency Inversion Principle is essential to achieve a more robust and extensible software design.
 

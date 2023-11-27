@@ -37,7 +37,7 @@ class BranchOffice
         $this->seniorDevelopers[] = $seniorDeveloper;
     }
 
-    public function startWork(): string
+    public function startSprint(): string
     {
         $juniorWork = array_map(fn($employee) => $employee->develop(), $this->juniorDevelopers);
         $midWork = array_map(fn($employee) => $employee->develop(), $this->midDevelopers);

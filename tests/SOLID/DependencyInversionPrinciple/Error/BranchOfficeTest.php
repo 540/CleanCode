@@ -37,7 +37,7 @@ class BranchOfficeTest extends TestCase
 
         $this->assertEquals(
             $expectedResponse,
-            $this->branchOffice->startWork()
+            $this->branchOffice->startSprint()
         );
     }
 }
