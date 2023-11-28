@@ -1,6 +1,6 @@
 <?php
 
-namespace Deg540\PHPTestingBoilerplate\SOLID\InterfaceSegregationPrinciple\Success;
+namespace Deg540\PHPTestingBoilerplate\SOLID\InterfaceSegregationPrinciple\Success\Interfaces;
 
 interface LeaderInterface extends Employee
 {

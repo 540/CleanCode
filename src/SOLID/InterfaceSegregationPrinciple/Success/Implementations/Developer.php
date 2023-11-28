@@ -1,7 +1,8 @@
 <?php
 
-namespace Deg540\PHPTestingBoilerplate\SOLID\InterfaceSegregationPrinciple\Success;
+namespace Deg540\PHPTestingBoilerplate\SOLID\InterfaceSegregationPrinciple\Success\Implementations;
 
+use Deg540\PHPTestingBoilerplate\SOLID\InterfaceSegregationPrinciple\Success\Interfaces\DeveloperInterface;
 use Exception;
 
 class Developer implements DeveloperInterface

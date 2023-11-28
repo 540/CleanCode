@@ -2,7 +2,7 @@
 
 namespace Deg540\PHPTestingBoilerplate\Test\SOLID\InterfaceSegregationPrinciple\Success;
 
-use Deg540\PHPTestingBoilerplate\SOLID\InterfaceSegregationPrinciple\Success\Developer;
+use Deg540\PHPTestingBoilerplate\SOLID\InterfaceSegregationPrinciple\Success\Implementations\Developer;
 use Exception;
 use PHPUnit\Framework\TestCase;
 
