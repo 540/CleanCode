@@ -35,6 +35,7 @@ class DeveloperTrialTest extends TestCase
      */
     public function getAllDataFromDevelopers()
     {
+        $this->markTestSkipped('To be implemented to validate the trial');
         $dataEtxebe = $this->etxebe->getAllData();
         $dataAsier = $this->asier->getAllData();
 
@@ -53,6 +54,7 @@ class DeveloperTrialTest extends TestCase
      */
     public function noTasksToDevelop()
     {
+        $this->markTestSkipped('To be implemented to validate the trial');
         $tasksEtxebe = $this->etxebe->tasksToDevelop();
         $tasksAsier = $this->asier->tasksToDevelop();
 

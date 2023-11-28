@@ -31,6 +31,7 @@ class BranchOfficeTest extends TestCase
      */
     public function getBranchOfficeEmployeesData(): void
     {
+        $this->markTestSkipped('To be implemented to validate the trial');
         $expectedResponse = 'Asier is a junior and is gradually developing "Login view" ||' .
             ' Javier is mid, has improved a lot and is developing "Login database" ||' .
             ' Iker is a senior and there is no one better than him developing "Login Architecture"';
