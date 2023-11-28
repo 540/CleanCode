@@ -1,4 +1,4 @@
-# Interface Segregation Principle
+# [Interface Segregation Principle](https://reflectoring.io/interface-segregation-principle/)
 
 Segregation means keeping things separate, and the Interface Segregation Principle is about separating interfaces.
 

@@ -2,7 +2,7 @@
 
 namespace Deg540\PHPTestingBoilerplate\SOLID\InterfaceSegregationPrinciple\Success;
 
-interface LeaderInterface
+interface LeaderInterface extends Employee
 {
     public function manageEmployees(): void;
 }
