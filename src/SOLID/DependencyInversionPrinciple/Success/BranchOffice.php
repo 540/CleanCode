@@ -2,7 +2,7 @@
 
 namespace Deg540\PHPTestingBoilerplate\SOLID\DependencyInversionPrinciple\Success;
 
-class BranchOffice
+class BranchOffice implements BranchOfficeDeveloper
 {
     /**
      * @var Developer[]
