@@ -15,6 +15,6 @@ class JuniorDeveloper implements Developer
 
     public function develop(): string
     {
-        return $this->name . ' is a junior and is gradually developing ' . $this->program;
+        return $this->name . ' is a junior and is gradually developing "' . $this->program . '"';
     }
 }

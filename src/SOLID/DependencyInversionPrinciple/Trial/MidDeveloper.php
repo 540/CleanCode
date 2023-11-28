@@ -15,6 +15,6 @@ class MidDeveloper
 
     public function develop(): string
     {
-        return $this->name . ' is mid, has improved a lot and is developing ' . $this->program;
+        return $this->name . ' is mid, has improved a lot and is developing "' . $this->program . '"';
     }
 }

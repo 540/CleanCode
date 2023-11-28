@@ -15,6 +15,6 @@ class SeniorDeveloper
 
     public function develop(): string
     {
-        return $this->name . ' is a senior and there is no one better than him developing ' . $this->program;
+        return $this->name . ' is a senior and there is no one better than him developing "' . $this->program . '"';
     }
 }

@@ -16,9 +16,9 @@ class BranchOfficeTest extends TestCase
     {
         parent::setUp();
 
-        $juniorDeveloper = new JuniorDeveloper('Asier', 'login view');
-        $midDeveloper = new MidDeveloper('Javier', 'login database');
-        $seniorDeveloper = new SeniorDeveloper('Iker', 'login Architecture');
+        $juniorDeveloper = new JuniorDeveloper('Asier', 'Login view');
+        $midDeveloper = new MidDeveloper('Javier', 'Login database');
+        $seniorDeveloper = new SeniorDeveloper('Iker', 'Login Architecture');
 
         $this->branchOffice = new BranchOffice();
         $this->branchOffice->addJuniorDeveloper($juniorDeveloper);
@@ -31,9 +31,9 @@ class BranchOfficeTest extends TestCase
      */
     public function getBranchOfficeEmployeesData(): void
     {
-        $expectedResponse = 'Asier is a junior and is gradually developing login view ||' .
-            ' Javier is mid, has improved a lot and is developing login database ||' .
-            ' Iker is a senior and there is no one better than him developing login Architecture';
+        $expectedResponse = 'Asier is a junior and is gradually developing "Login view" ||' .
+            ' Javier is mid, has improved a lot and is developing "Login database" ||' .
+            ' Iker is a senior and there is no one better than him developing "Login Architecture"';
 
         $this->assertEquals(
             $expectedResponse,
