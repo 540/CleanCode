@@ -1,11 +1,11 @@
 <?php
 
-namespace Deg540\PHPTestingBoilerplate\Test\DRY\Error;
+namespace Deg540\PHPTestingBoilerplate\DRY\Tests\Success;
 
-use Deg540\PHPTestingBoilerplate\DRY\Error\Leader;
+use Deg540\PHPTestingBoilerplate\DRY\Principle\Success\Leader;
 use PHPUnit\Framework\TestCase;
 
-class LeaderErrorTest extends TestCase
+class LeaderSuccessTest extends TestCase
 {
     public Leader $leader;
 
