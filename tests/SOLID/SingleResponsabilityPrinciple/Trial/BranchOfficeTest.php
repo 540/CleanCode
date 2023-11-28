@@ -31,6 +31,7 @@ class BranchOfficeTest extends TestCase
      */
     public function getBranchOfficeWaste(): void
     {
+        $this->markTestSkipped('To be implemented to validate the trial');
         $expectedPrice = 3038;
         $this->assertEquals($expectedPrice, $this->branchOffice->calculateWasteOfEmployees());
     }
@@ -40,6 +41,7 @@ class BranchOfficeTest extends TestCase
      */
     public function getBranchOfficeEmployeesData(): void
     {
+        $this->markTestSkipped('To be implemented to validate the trial');
         $expectedData = 'Name: Asier, Salary: 1220 || Name: Javier, Salary: 818 || Name: Iker, Salary: 1000';
         $this->assertEquals($expectedData, $this->branchOffice->getEmployeesData());
     }

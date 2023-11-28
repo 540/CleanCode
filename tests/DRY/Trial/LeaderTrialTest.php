@@ -27,6 +27,7 @@ class LeaderTrialTest extends TestCase
      */
     public function getAllDataFromLeader()
     {
+        $this->markTestSkipped('To be implemented to validate the trial');
         $data = $this->leader->getAllData();
 
         $this->assertEquals(
@@ -40,6 +41,7 @@ class LeaderTrialTest extends TestCase
      */
     public function noTasksToLead()
     {
+        $this->markTestSkipped('To be implemented to validate the trial');
         $tasks = $this->leader->tasksToLead();
 
         $this->assertEquals('You have no tasks to lead', $tasks);

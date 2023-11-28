@@ -32,6 +32,7 @@ final class TellDontAskErrorTest extends TestCase
      */
     public function getNamesOfEmployeesWithBigSalary(): void
     {
+        $this->markTestSkipped('To be implemented to validate the trial');
         $expectedNames = "Asier, Iker";
         $this->assertEquals($expectedNames, $this->branchOffice->getNamesOfEmployeesWithBigSalary());
     }

@@ -28,6 +28,7 @@ class BranchOfficeTest extends TestCase
      */
     public function getBranchOfficeEmployeesData(): void
     {
+        $this->markTestSkipped('To be implemented to validate the trial');
         $this->assertEquals(
             'Asier is laying out login view || Javier is implementing login database',
             $this->branchOffice->startSprint()
