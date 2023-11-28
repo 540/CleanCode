@@ -1,11 +1,11 @@
 <?php
 
-namespace Deg540\PHPTestingBoilerplate\Test\DRY\Success;
+namespace Deg540\PHPTestingBoilerplate\DRY\Tests\Trial;
 
-use Deg540\PHPTestingBoilerplate\DRY\Success\Developer;
+use Deg540\PHPTestingBoilerplate\DRY\Principle\Trial\Developer;
 use PHPUnit\Framework\TestCase;
 
-class DeveloperSuccessTest extends TestCase
+class DeveloperTrialTest extends TestCase
 {
     public Developer $etxebe;
     public Developer $asier;
@@ -53,8 +53,8 @@ class DeveloperSuccessTest extends TestCase
      */
     public function noTasksToDevelop()
     {
-        $tasksEtxebe = $this->etxebe->tasksToBeProgrammed();
-        $tasksAsier = $this->asier->tasksToBeProgrammed();
+        $tasksEtxebe = $this->etxebe->tasksToDevelop();
+        $tasksAsier = $this->asier->tasksToDevelop();
 
         $this->assertEquals('You have no tasks to develop', $tasksEtxebe);
         $this->assertEquals('You have tasks to develop', $tasksAsier);

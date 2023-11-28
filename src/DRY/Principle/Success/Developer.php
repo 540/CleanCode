@@ -1,6 +1,6 @@
 <?php
 
-namespace Deg540\PHPTestingBoilerplate\DRY\Success;
+namespace Deg540\PHPTestingBoilerplate\DRY\Principle\Success;
 
 class Developer extends Employee
 {

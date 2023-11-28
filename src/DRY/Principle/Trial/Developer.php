@@ -1,6 +1,6 @@
 <?php
 
-namespace Deg540\PHPTestingBoilerplate\DRY\Trial;
+namespace Deg540\PHPTestingBoilerplate\DRY\Principle\Trial;
 
 class Developer
 {

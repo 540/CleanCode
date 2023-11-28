@@ -1,11 +1,11 @@
 <?php
 
-namespace Deg540\PHPTestingBoilerplate\Test\DRY\Trial;
+namespace Deg540\PHPTestingBoilerplate\DRY\Tests\Error;
 
-use Deg540\PHPTestingBoilerplate\DRY\Trial\Developer;
+use Deg540\PHPTestingBoilerplate\DRY\Principle\Error\Developer;
 use PHPUnit\Framework\TestCase;
 
-class DeveloperTrialTest extends TestCase
+class DeveloperErrorTest extends TestCase
 {
     public Developer $etxebe;
     public Developer $asier;

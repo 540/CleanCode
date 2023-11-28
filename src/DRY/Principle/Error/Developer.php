@@ -1,15 +1,15 @@
 <?php
 
-namespace Deg540\PHPTestingBoilerplate\DRY\Error;
+namespace Deg540\PHPTestingBoilerplate\DRY\Principle\Error;
 
-class Leader
+class Developer
 {
     //Here we are broking the DRY principle
     protected string $name;
     protected string $email;
     protected string $phoneNumber;
     protected string $password;
-    protected array $tasksToLead = [];
+    protected array $tasksToDevelop = [];
 
     /**
      * @param $name
@@ -24,7 +24,7 @@ class Leader
         $this->email = $email;
         $this->phoneNumber = $phoneNumber;
         $this->password = $password;
-        $this->tasksToLead = $tasks;
+        $this->tasksToDevelop = $tasks;
     }
 
     public function getName(): string
@@ -49,17 +49,17 @@ class Leader
 
     public function getAllData(): string
     {
-        return $this->getName() .
+        return  $this->getName() .
             ' ' . $this->getEmail() .
             ' ' . $this->getPhoneNumber() .
             ' ' . $this->getPassword();
     }
 
-    public function tasksToLead(): string
+    public function tasksToDevelop(): string
     {
-        if (empty($this->tasksToLead)) {
-            return 'You have no tasks to lead';
+        if (empty($this->tasksToDevelop)) {
+            return 'You have no tasks to develop';
         }
-        return 'You have tasks to lead';
+        return 'You have tasks to develop';
     }
 }
